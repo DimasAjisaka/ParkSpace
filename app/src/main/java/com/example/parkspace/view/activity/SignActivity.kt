@@ -18,28 +18,25 @@ class SignActivity : AppCompatActivity() {
        _binding = ActivitySignBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.term?.text = "Term"
-        binding.policy?.text = "Policy"
+        binding.tablay.newTab().let { binding.tablay.addTab(it.setText("Sign In")) }
+        binding.tablay.newTab().let { binding.tablay.addTab(it.setText("Sign Up")) }
+        binding.tablay.tabGravity = TabLayout.GRAVITY_FILL
 
-//        binding.tablay?.newTab()?.let { binding.tablay?.addTab(it.setText("Sign In")) }
-//        binding.tablay?.newTab()?.let { binding.tablay?.addTab(it.setText("Sign Up")) }
-//        binding.tablay?.tabGravity = TabLayout.GRAVITY_FILL
-//
-//        val adapter =
-//            binding.tablay?.tabCount?.let { SignTabPagerAdapter(this, supportFragmentManager, it) }
-//        binding.viewpager?.adapter = adapter
-//        binding.tablay?.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener{
-//            override fun onTabSelected(tab: TabLayout.Tab?) {
-//                if (tab != null) {
-//                    binding.viewpager?.currentItem = tab.position
-//                }
-//            }
-//
-//            override fun onTabUnselected(tab: TabLayout.Tab?) {}
-//
-//            override fun onTabReselected(tab: TabLayout.Tab?) {}
-//
-//        })
+        val adapter =
+            binding.tablay.tabCount.let { SignTabPagerAdapter(this, supportFragmentManager, it) }
+        binding.viewpager.adapter = adapter
+        binding.viewpager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.tablay))
+        binding.tablay.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener{
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                binding.viewpager.currentItem = tab!!.position
+
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
+
+        })
     }
 
     override fun onDestroy() {
