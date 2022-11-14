@@ -1,15 +1,15 @@
-package com.example.parkspace.activity
+package com.example.parkspace.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.parkspace.databinding.ActivityProfilBinding
+import com.example.parkspace.databinding.ActivityForgotPassBinding
 
-class ProfilActivity : AppCompatActivity() {
-    private var _binding: ActivityProfilBinding? = null
+class ForgotPassActivity : AppCompatActivity() {
+    private var _binding: ActivityForgotPassBinding? = null
     private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityProfilBinding.inflate(layoutInflater)
+        _binding = ActivityForgotPassBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 

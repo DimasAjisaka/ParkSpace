@@ -1,15 +1,16 @@
-package com.example.parkspace.activity
+package com.example.parkspace.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.parkspace.databinding.ActivityRegisterBinding
+import com.example.parkspace.R
+import com.example.parkspace.databinding.ActivityMainBinding
 
-class RegisterActivity : AppCompatActivity() {
-    private var _binding: ActivityRegisterBinding? = null
+class MainActivity : AppCompatActivity() {
+    private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityRegisterBinding.inflate(layoutInflater)
+        _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 

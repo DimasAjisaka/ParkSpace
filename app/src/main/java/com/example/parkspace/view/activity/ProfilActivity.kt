@@ -1,15 +1,15 @@
-package com.example.parkspace.activity
+package com.example.parkspace.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.parkspace.databinding.ActivityFlashScreenBinding
+import com.example.parkspace.databinding.ActivityProfilBinding
 
-class FlashScreenActivity : AppCompatActivity() {
-    private var _binding: ActivityFlashScreenBinding? = null
+class ProfilActivity : AppCompatActivity() {
+    private var _binding: ActivityProfilBinding? = null
     private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityFlashScreenBinding.inflate(layoutInflater)
+        _binding = ActivityProfilBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 

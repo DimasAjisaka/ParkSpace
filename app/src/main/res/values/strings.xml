@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ParkSpace</string>
+    <string name="pslogo">pslogo</string>
+    <string name="welcome_to">Welcome to</string>
+    <string name="parkspace">PARKSPACE</string>
+    <string name="rectangle3">rectangle3</string>
+    <string name="rectangle4">rectangle4</string>
+    <string name="shapetop">shapetop</string>
+    <string name="sign_in">Sign In</string>
+    <string name="by_signing_in_you_are_agreeing_our">By signing in you are agreeing our</string>
+    <string name="term_and_privacy_policy">Term and privacy policy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

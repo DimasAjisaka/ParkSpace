@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.SignActivity"
+    android:background="@color/blue">
+
+    <!--  container  -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shapebackgroundsign">
+
+        <!--  shape top  -->
+        <ImageView
+            android:scaleType="fitStart"
+            android:id="@+id/shapetop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/ellipse_11"
+            android:contentDescription="@string/shapetop"/>
+
+        <!-- group text -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="100dp">
+
+            <!-- text sign -->
+            <TextView
+                android:id="@+id/sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/parkspace"
+                android:fontFamily="@font/product_sans_bold"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="@string/sign_in"/>
+
+            <!-- ParkSpace -->
+            <TextView
+                android:id="@+id/parkspace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sign"
+                app:layout_constraintBottom_toTopOf="@id/term"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:text="@string/parkspace"/>
+
+            <!-- policy -->
+            <TextView
+                android:id="@+id/term"
+                android:layout_width="244dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/parkspace"
+                app:layout_constraintBottom_toTopOf="@id/policy"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:text="@string/by_signing_in_you_are_agreeing_our" />
+
+            <!-- policy -->
+            <TextView
+                android:id="@+id/policy"
+                android:layout_width="244dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/term"
+                android:fontFamily="@font/product_sans_regular"
+                android:textSize="16sp"
+                android:textColor="@color/blue"
+                android:textAlignment="center"
+                android:text="@string/term_and_privacy_policy"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- page view -->
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/tablay"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/text"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:background="@color/white"-->
+<!--            app:tabIndicator="@color/light_black"-->
+<!--            app:tabSelectedTextColor="@color/light_black"-->
+<!--            app:tabTextColor="@color/grey"-->
+<!--            app:tabTextAppearance="@style/tablayText"/>-->
+
+<!--        <androidx.viewpager.widget.ViewPager-->
+<!--            android:id="@+id/viewpager"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/tablay"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

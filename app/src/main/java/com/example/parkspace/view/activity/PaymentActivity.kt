@@ -1,4 +1,4 @@
-package com.example.parkspace.activity
+package com.example.parkspace.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
