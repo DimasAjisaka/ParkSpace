@@ -162,9 +162,10 @@
         android:layout_marginEnd="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/product_sans_bold"
-        android:text="@string/sign_in"
+        android:text="@string/sign_in_with_google"
         android:textSize="16sp"
-        android:backgroundTint="@color/calgar_blue"
+        android:textColor="?attr/mediumText"
+        android:backgroundTint="?attr/field"
         android:textAllCaps="false"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
