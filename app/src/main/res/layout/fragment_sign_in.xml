@@ -168,4 +168,44 @@
         android:backgroundTint="?attr/field"
         android:textAllCaps="false"/>
 
+    <!-- Group Don't have account -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bgoogle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="34dp">
+
+        <!-- dont have account -->
+        <TextView
+            android:id="@+id/account"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:fontFamily="@font/product_sans_medium"
+            android:textSize="14sp"
+            android:textColor="?attr/mediumText"
+            android:text="@string/don_t_have_an_account"/>
+
+        <!-- dont have account -->
+        <TextView
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/account"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/product_sans_medium"
+            android:textSize="14sp"
+            android:textColor="@color/calgar_blue"
+            android:text="@string/sign_up"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

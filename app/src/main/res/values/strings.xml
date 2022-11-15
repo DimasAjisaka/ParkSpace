@@ -21,4 +21,5 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="or_connect_with">or connect with</string>
     <string name="sign_in_with_google">Sign In with Google</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
 </resources>
