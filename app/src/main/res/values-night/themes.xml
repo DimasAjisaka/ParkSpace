@@ -2,15 +2,33 @@
     <!-- Base application theme. -->
     <style name="Theme.ParkSpace" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/peaceful_river</item>
+        <item name="colorPrimaryVariant">@color/sapphire_blue</item>
         <item name="colorOnPrimary">@color/black</item>
+        <item name="bg">@color/chaos_black</item>
+        <item name="boldText">@color/pixel_white</item>
+        <item name="mediumText">@color/silver_polish</item>
+        <item name="regularText">@color/lynx_white</item>
+        <item name="typing">@color/silver_polish</item>
+        <item name="appbar">@color/chaos_black</item>
+        <item name="card">@color/black</item>
+        <item name="field">@color/black_rock</item>
+        <item name="invers_bg">@color/supernatural</item>
+        <item name="inactivetab">@color/silver_polish</item>
+        <item name="mainbg">@color/dark_blue</item>
+        <item name="strokeField">@color/pixel_white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/peaceful_river</item>
+        <item name="colorSecondaryVariant">@color/sapphire_blue</item>
+        <item name="colorOnSecondary">@color/sapphire_blue</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/dark_blue</item>
+        <item name="android:windowLightStatusBar">false</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="tablayText" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:fontFamily">@font/product_sans_bold</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>

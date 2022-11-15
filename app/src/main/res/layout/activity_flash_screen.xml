@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.FlashScreenActivity">
+    tools:context=".view.activity.FlashScreenActivity"
+    android:background="?attr/bg"
+    android:id="@+id/fullscreencontent">
 
     <!-- background -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,7 +80,7 @@
                 app:layout_constraintTop_toBottomOf="@id/pslogo"
                 android:fontFamily="@font/product_sans_bold"
                 android:textSize="42sp"
-                android:textColor="@color/black"
+                android:textColor="?attr/boldText"
                 android:text="@string/parkspace"/>
 
 

@@ -1,23 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+
     <color name="black">#FF000000</color>
-    <color name="tblack">#6B5E5E</color>
-    <color name="light_black">#323643</color>
+    <color name="chaos_black">#101010</color>
+    <color name="black_rock">#2B2F3A</color>
+    <color name="moroccan_dusk">#6B5E5E</color>
+    <color name="supernatural">#323643</color>
+    <color name="big_stone">#313F4A</color>
+    <color name="dark_grey">#363636</color>
+    <color name="british_shorthair">#606470</color>
+    <color name="trolley_grey">#828282</color>
+    <color name="shark_fin">#959595</color>
+    <color name="window_grey">#999EA1</color>
+    <color name="mortar_grey">#9E9E9E</color>
+    <color name="silver_polish">#C6C6C6</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="white_balance">#F7F7F7</color>
-    <color name="grey">#999EA1</color>
-    <color name="tgrey">#9E9E9E</color>
-    <color name="light_grey">#C6C6C6</color>
-    <color name="blue">#469FD1</color>
-    <color name="dark_blue">#0386D0</color>
-    <color name="light_blue">#4D93DEFF</color>
-    <color name="red">#FB344F</color>
-    <color name="orange">#FFA53C</color>
+    <color name="lynx_white">#F7F7F7</color>
+    <color name="pixel_white">#DBDBDB</color>
+    <color name="blue_damselfly">#2EA7DC</color>
+    <color name="peaceful_river">#469FD1</color>
+    <color name="calgar_blue">#0386D0</color>
+    <color name="sapphire_blue">#036BB9</color>
+    <color name="dark_blue">#313F4A</color>
+    <color name="gas_giant">#4D93DEFF</color>
+    <color name="cherry_paddle_pop">#FB344F</color>
+    <color name="hawaiian_passion">#FFA53C</color>
+
+    <attr format="color" name="bg"/>
+    <attr format="color" name="card"/>
+    <attr format="color" name="boldText"/>
+    <attr format="color" name="regularText"/>
+    <attr format="color" name="appbar"/>
+    <attr format="color" name="field"/>
+    <attr format="color" name="typing"/>
+    <attr format="color" name="invers_bg"/>
+    <attr format="color" name="inactivetab"/>
+    <attr format="color" name="mainbg"/>
+    <attr format="color" name="mediumText"/>
+    <attr format="color" name="strokeField"/>
 
 
 </resources>

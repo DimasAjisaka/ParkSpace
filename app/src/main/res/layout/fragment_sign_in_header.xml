@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.SignInHeader">
+
+            <!-- group text -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- text sign -->
+                <TextView
+                    android:id="@+id/sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/parkspace"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textSize="20sp"
+                    android:textColor="?attr/boldText"
+                    android:text="@string/sign_in"/>
+
+                <!-- ParkSpace -->
+                <TextView
+                    android:id="@+id/parkspace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sign"
+                    app:layout_constraintBottom_toTopOf="@id/term"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textSize="30sp"
+                    android:textColor="?attr/boldText"
+                    android:text="@string/parkspace"/>
+
+                <!-- policy -->
+                <TextView
+                    android:id="@+id/term"
+                    android:layout_width="244dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/parkspace"
+                    app:layout_constraintBottom_toTopOf="@id/policy"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/product_sans_regular"
+                    android:textSize="16sp"
+                    android:textColor="?attr/regularText"
+                    android:textAlignment="center"
+                    android:text="@string/by_signing_in_you_are_agreeing_our" />
+
+                <!-- policy -->
+                <TextView
+                    android:id="@+id/policy"
+                    android:layout_width="244dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/term"
+                    android:fontFamily="@font/product_sans_regular"
+                    android:textSize="16sp"
+                    android:textColor="@color/peaceful_river"
+                    android:textAlignment="center"
+                    android:text="@string/term_and_privacy_policy"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

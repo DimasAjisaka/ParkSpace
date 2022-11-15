@@ -1,10 +1,14 @@
 package com.example.parkspace.view.activity
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
+import android.view.WindowInsets
+import android.view.WindowManager
 import com.example.parkspace.databinding.ActivityFlashScreenBinding
 
 class FlashScreenActivity : AppCompatActivity() {
@@ -14,6 +18,21 @@ class FlashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityFlashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//        supportActionBar?.hide()
+//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        @Suppress("DEPRECATION")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.hide(WindowInsets.Type.statusBars())
+        } else {
+            window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        }
+        supportActionBar?.hide()
+
+//        if (Build.VERSION.SDK_INT >= 30){
+//            binding.fullscreencontent.windowInsetsController?.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
+//        } else {
+//            binding.fullscreencontent.systemUiVisibility = View.SYSTEM_UI_FLAG_LOW_PROFILE or View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+//        }
 
         //animation
         val splashDuration = 2000
