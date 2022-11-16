@@ -49,7 +49,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/header"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:background="?attr/bg"
             app:tabIndicatorColor="@color/calgar_blue"
             app:tabSelectedTextColor="@color/calgar_blue"

@@ -21,6 +21,7 @@ class SignIn : Fragment() {
         return binding.root
     }
 
+    //tooggle
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.invisible.setOnClickListener{
