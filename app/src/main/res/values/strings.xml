@@ -30,4 +30,19 @@
     <string name="already_have_an_account">Already have an account?</string>
     <string name="imgbutton">imgbutton</string>
     <string name="button">button</string>
+    <string name="_62">+62</string>
+    <string name="backarrow">BackArrow</string>
+    <string name="footer">footer</string>
+    <string name="icon">icon</string>
+    <string name="please_enter_your_email_address_to_receive_a_verification_number">Please Enter Your Email Address to Receive a Verification Number</string>
+    <string name="send">Send</string>
+    <string name="verify_your_email">Verify Your Email</string>
+    <string name="please_enter_the_4_digit_code_sent_to_mail">Please Enter The 4 Digit Code Sent to mail</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="verify">Verify</string>
+    <string name="your_new_password_must_be_different_from_previously_used_password">Your New Password Must Be Different from Previously Used Password</string>
+    <string name="new_password">New Password</string>
+    <string name="please_enter_your_new_password">Please enter your new password</string>
+    <string name="please_confirm_your_new_password">Please confirm your new password</string>
+    <string name="save">Save</string>
 </resources>

@@ -2,12 +2,11 @@ package com.example.parkspace.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager.widget.ViewPager
 import com.example.parkspace.adapters.SignHeaderAdapter
 import com.example.parkspace.adapters.SignTabPagerAdapter
 import com.example.parkspace.databinding.ActivitySignBinding
 import com.google.android.material.tabs.TabLayout
-import java.util.Objects
+
 
 class SignActivity : AppCompatActivity() {
     private var _binding: ActivitySignBinding? = null

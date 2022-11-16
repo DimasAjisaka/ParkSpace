@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.fragments.VerifyEmail">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:liftOnScroll="false">
+
+        <!-- Appbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/appbar"
+            android:elevation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary">
+
+            <ImageButton
+                android:id="@+id/backarrow"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="34dp"
+                android:background="@drawable/ic_baseline_arrow_back_ios_new_24"
+                android:backgroundTint="?attr/boldText"
+                android:contentDescription="@string/backarrow" />
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/backarrow"
+                android:layout_marginStart="50dp"
+                android:text="@string/verify_your_email"
+                android:fontFamily="@font/product_sans_bold"
+                android:textSize="22sp"
+                android:textColor="?attr/boldText"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Icon -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/icon"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/ellipse_68">
+
+                <ImageView
+                    android:id="@+id/icondetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/mail"
+                    android:backgroundTint="?attr/boldText"
+                    android:contentDescription="@string/icon"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Text -->
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="244dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="38dp"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="?attr/regularText"
+                android:textSize="16sp"
+                android:text="@string/please_enter_the_4_digit_code_sent_to_mail"
+                android:textAlignment="center"/>
+
+            <!-- Input Code -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inputcodemain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="38dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/code1"
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/code_field"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/regularText"
+                    android:textColorHint="?attr/typing"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/code2"
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/code1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/code_field"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/regularText"
+                    android:textColorHint="?attr/typing"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/code3"
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/code2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/code_field"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/regularText"
+                    android:textColorHint="?attr/typing"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionNext"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/code4"
+                    android:layout_width="58dp"
+                    android:layout_height="64dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/code3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/code_field"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:textColor="?attr/regularText"
+                    android:textColorHint="?attr/typing"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionDone"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- resend code -->
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/inputcodemain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:textColor="@color/hawaiian_passion"
+                android:textSize="14sp"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/inputcodemain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:textColor="@color/hawaiian_passion"
+                android:textSize="14sp"
+                android:text="@string/resend_code"/>
+
+            <!-- Button Send -->
+            <Button
+                android:id="@+id/push"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resend"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:text="@string/verify"
+                android:textSize="14sp"
+                android:backgroundTint="@color/calgar_blue"
+                android:textAllCaps="false"
+                app:circularflow_radiusInDP="50"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- footer -->
+    <ImageView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-100dp"
+        android:background="@drawable/subtract"
+        android:contentDescription="@string/footer"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

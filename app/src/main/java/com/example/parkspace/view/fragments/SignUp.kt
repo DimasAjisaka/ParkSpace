@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager.widget.ViewPager
 import com.example.parkspace.R
 import com.example.parkspace.databinding.FragmentSignUpBinding
 
@@ -16,7 +17,7 @@ class SignUp : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSignUpBinding.inflate(layoutInflater)
         return binding.root
     }
@@ -34,6 +35,14 @@ class SignUp : Fragment() {
             binding.invisible.visibility = View.VISIBLE
             binding.visible.visibility = View.INVISIBLE
             binding.inputpass.transformationMethod = PasswordTransformationMethod.getInstance()
+        }
+
+        binding.signin.setOnClickListener {
+            val header = activity?.findViewById<ViewPager>(R.id.header)
+            val signIn = activity?.findViewById<ViewPager>(R.id.viewpager)
+
+            header!!.currentItem = 0
+            signIn!!.currentItem = 0
         }
     }
 

@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.parkspace.R
 import com.example.parkspace.databinding.FragmentSignUpHeaderBinding
 
 
@@ -15,7 +14,7 @@ class SignUpHeader : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSignUpHeaderBinding.inflate(layoutInflater)
         return binding.root
     }

@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import com.example.parkspace.databinding.ActivityFlashScreenBinding
