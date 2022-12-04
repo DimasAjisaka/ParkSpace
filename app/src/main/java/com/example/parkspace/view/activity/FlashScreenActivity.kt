@@ -2,7 +2,6 @@ package com.example.parkspace.view.activity
 
 import android.content.Intent
 import android.content.SharedPreferences
-import android.icu.util.UniversalTimeScale.toLong
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -36,7 +35,7 @@ class FlashScreenActivity : AppCompatActivity() {
 //        }
 
         //animation
-        val splashDuration = 2000
+        val splashDuration: Long = 2000
 
         binding.pslogo.alpha = 0f
         binding.pstext.alpha = 0f
@@ -61,18 +60,18 @@ class FlashScreenActivity : AppCompatActivity() {
             // is first time checked
             onBoardingActivity =
                 getSharedPreferences("onBoardingActivity", MODE_PRIVATE)
-            val isFirstTime: Boolean = onBoardingActivity.getBoolean("firstTime", true)
-            if (isFirstTime) {
-                val editor: SharedPreferences.Editor = onBoardingActivity.edit()
-                editor.putBoolean("firstTime", false)
-                editor.apply()
+            val isFirstTime: Boolean? = onBoardingActivity?.getBoolean("firstTime", true)
+            if (isFirstTime!!) {
+                val editor: SharedPreferences.Editor? = onBoardingActivity?.edit()
+                editor?.putBoolean("firstTime", false)
+                editor?.apply()
                 startActivity(Intent(this@FlashScreenActivity, OnBoardingActivity::class.java))
                 finish()
             } else {
                 startActivity(Intent(this@FlashScreenActivity, SignActivity::class.java))
                 finish()
             }
-        } as Runnable), FlashScreenActivity.toLong())
+        }), splashDuration)
     }
 
     override fun onDestroy() {
