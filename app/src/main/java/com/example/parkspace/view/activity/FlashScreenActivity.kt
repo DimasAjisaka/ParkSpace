@@ -1,18 +1,20 @@
 package com.example.parkspace.view.activity
 
 import android.content.Intent
+import android.content.SharedPreferences
+import android.icu.util.UniversalTimeScale.toLong
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
 import android.view.WindowInsets
 import android.view.WindowManager
+import androidx.appcompat.app.AppCompatActivity
 import com.example.parkspace.databinding.ActivityFlashScreenBinding
 
 class FlashScreenActivity : AppCompatActivity() {
     private var _binding: ActivityFlashScreenBinding? = null
     private val binding get() = _binding!!
+    private var onBoardingActivity: SharedPreferences? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityFlashScreenBinding.inflate(layoutInflater)
@@ -46,10 +48,31 @@ class FlashScreenActivity : AppCompatActivity() {
         binding.pstext.animate().alpha(1f).translationY(0f).setStartDelay(500).setDuration(500).start()
 
         //next
-        Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@FlashScreenActivity, OnBoardingActivity::class.java))
-            finish()
-        }, splashDuration.toLong())
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            startActivity(Intent(this@FlashScreenActivity, OnBoardingActivity::class.java))
+//            finish()
+//        }, splashDuration.toLong())
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        Handler().postDelayed((Runnable {
+
+
+            // is first time checked
+            onBoardingActivity =
+                getSharedPreferences("onBoardingActivity", MODE_PRIVATE)
+            val isFirstTime: Boolean = onBoardingActivity.getBoolean("firstTime", true)
+            if (isFirstTime) {
+                val editor: SharedPreferences.Editor = onBoardingActivity.edit()
+                editor.putBoolean("firstTime", false)
+                editor.apply()
+                startActivity(Intent(this@FlashScreenActivity, OnBoardingActivity::class.java))
+                finish()
+            } else {
+                startActivity(Intent(this@FlashScreenActivity, SignActivity::class.java))
+                finish()
+            }
+        } as Runnable), FlashScreenActivity.toLong())
     }
 
     override fun onDestroy() {
