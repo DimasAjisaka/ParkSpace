@@ -15,14 +15,14 @@
         <item name="field">@color/white</item>
         <item name="invers_bg">@color/pixel_white</item>
         <item name="inactivetab">@color/shark_fin</item>
-        <item name="mainbg">@color/peaceful_river</item>
+        <item name="mainbg">@color/frozen</item>
         <item name="strokeField">@color/silver_polish</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/peaceful_river</item>
         <item name="colorSecondaryVariant">@color/sapphire_blue</item>
         <item name="colorOnSecondary">@color/sapphire_blue</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/peaceful_river</item>
+        <item name="android:statusBarColor">@color/frozen</item>
         <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
     </style>

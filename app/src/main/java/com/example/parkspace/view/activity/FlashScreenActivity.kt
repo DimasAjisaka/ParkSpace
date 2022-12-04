@@ -47,7 +47,7 @@ class FlashScreenActivity : AppCompatActivity() {
 
         //next
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@FlashScreenActivity, SignActivity::class.java))
+            startActivity(Intent(this@FlashScreenActivity, OnBoardingActivity::class.java))
             finish()
         }, splashDuration.toLong())
     }

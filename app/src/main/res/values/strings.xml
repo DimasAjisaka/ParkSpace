@@ -45,4 +45,7 @@
     <string name="please_enter_your_new_password">Please enter your new password</string>
     <string name="please_confirm_your_new_password">Please confirm your new password</string>
     <string name="save">Save</string>
+    <string name="next">Next</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
 </resources>

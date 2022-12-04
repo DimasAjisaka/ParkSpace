@@ -17,6 +17,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lynx_white">#F7F7F7</color>
     <color name="pixel_white">#DBDBDB</color>
+    <color name="frozen">#AAE5FF</color>
     <color name="blue_damselfly">#2EA7DC</color>
     <color name="peaceful_river">#469FD1</color>
     <color name="calgar_blue">#0386D0</color>
