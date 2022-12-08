@@ -52,11 +52,22 @@ class OnBoardingActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 setCurrentIndicators(position)
+                if (position == 3){
+                    "Start".also { binding.buttonNext.text = it }
+                } else{
+                    "Next".also { binding.buttonNext.text = it }
+                }
             }
         })
         binding.buttonNext.setOnClickListener{
             if (binding.sliderView.currentItem + 1 < onBoardingSliderAdapter.itemCount){
                 binding.sliderView.currentItem += 1
+//                if (binding.sliderView.currentItem == onBoardingSliderAdapter.itemCount-1){
+//                    "Start".also { binding.buttonNext.text = it }
+//                }
+//                else{
+//                    "Next".also { binding.buttonNext.text = it }
+//                }
             }else{
                 Intent(applicationContext, SignActivity::class.java).also {
                     startActivity(it)

@@ -44,6 +44,14 @@ class SignUp : Fragment() {
             header!!.currentItem = 0
             signIn!!.currentItem = 0
         }
+
+        binding.push.setOnClickListener {
+            val header = activity?.findViewById<ViewPager>(R.id.header)
+            val signIn = activity?.findViewById<ViewPager>(R.id.viewpager)
+
+            header!!.currentItem = 0
+            signIn!!.currentItem = 0
+        }
     }
 
     override fun onDestroy() {

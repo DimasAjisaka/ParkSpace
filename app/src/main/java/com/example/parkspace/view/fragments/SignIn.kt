@@ -12,6 +12,7 @@ import androidx.viewpager.widget.ViewPager
 import com.example.parkspace.R
 import com.example.parkspace.databinding.FragmentSignInBinding
 import com.example.parkspace.view.activity.ForgotPassActivity
+import com.example.parkspace.view.activity.MainActivity
 
 class SignIn : Fragment() {
     private var _binding: FragmentSignInBinding? = null
@@ -49,6 +50,10 @@ class SignIn : Fragment() {
 
         binding.forgotpass.setOnClickListener {
             startActivity(Intent(context,ForgotPassActivity::class.java))
+        }
+
+        binding.push.setOnClickListener {
+            startActivity(Intent(context, MainActivity::class.java))
         }
     }
 
