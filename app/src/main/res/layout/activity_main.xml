@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/frozen"
+    android:background="?attr/mainbackground"
     tools:context=".view.activity.MainActivity">
 
 
@@ -14,7 +14,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/tealish_blue"/>
+        android:background="?attr/mainfoot"/>
 
     <!--header-->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -55,7 +55,7 @@
                 android:layout_marginStart="8dp"
                 android:fontFamily="@font/product_sans_regular"
                 android:textSize="16sp"
-                android:textColor="@color/moroccan_dusk"
+                android:textColor="?attr/regularText"
                 android:text="@string/location"/>
 
 
@@ -80,7 +80,7 @@
                 app:layout_constraintEnd_toStartOf="@id/name"
                 android:fontFamily="@font/product_sans_bold"
                 android:textSize="24sp"
-                android:textColor="@color/black"
+                android:textColor="?attr/maintextbold"
                 android:text="@string/hello"/>
             <TextView
                 android:id="@+id/name"
@@ -93,7 +93,7 @@
                 android:layout_marginStart="4dp"
                 android:fontFamily="@font/product_sans_bold"
                 android:textSize="24sp"
-                android:textColor="@color/black"
+                android:textColor="?attr/maintextbold"
                 android:text="@string/name"/>
             <TextView
                 android:id="@+id/seru"
@@ -104,7 +104,7 @@
                 app:layout_constraintStart_toEndOf="@id/name"
                 android:fontFamily="@font/product_sans_bold"
                 android:textSize="24sp"
-                android:textColor="@color/black"
+                android:textColor="?attr/maintextbold"
                 android:text="@string/seru"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -126,7 +126,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:src="@drawable/profil"
+                android:background="@drawable/profil"
+                android:backgroundTint="?attr/maintextbold"
                 android:contentDescription="@string/profilelogo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -172,6 +173,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/start"
+                android:backgroundTint="?attr/boldText"
                 android:contentDescription="@string/start"/>
 
             <TextView
@@ -199,7 +201,7 @@
                 android:fontFamily="@font/product_sans_medium"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                android:textColor="@color/british_shorthair"
+                android:textColor="?attr/maintextmedium"
                 android:text="@string/start"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -234,6 +236,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/min"
+                android:backgroundTint="?attr/boldText"
                 android:contentDescription="@string/min"/>
 
             <TextView
@@ -261,7 +264,7 @@
                 android:fontFamily="@font/product_sans_medium"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                android:textColor="@color/british_shorthair"
+                android:textColor="?attr/maintextmedium"
                 android:text="@string/min"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -296,6 +299,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginTop="14dp"
                 android:background="@drawable/km"
+                android:backgroundTint="?attr/boldText"
                 android:contentDescription="@string/km"/>
 
             <TextView
@@ -323,7 +327,7 @@
                 android:fontFamily="@font/product_sans_medium"
                 android:textAlignment="center"
                 android:textSize="20sp"
-                android:textColor="@color/british_shorthair"
+                android:textColor="?attr/maintextmedium"
                 android:text="@string/km"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -333,21 +337,24 @@
     <!--card ticket-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cardticket"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="210dp"
         app:layout_constraintTop_toBottomOf="@id/menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
 
         <ImageView
-            android:layout_width="350dp"
-            android:layout_height="210dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:background="@drawable/cardticket"
+            android:backgroundTint="?attr/cardticket"
             android:contentDescription="@string/cardticket"/>
 <!--identitas no parking-->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -369,7 +376,7 @@
                 app:layout_constraintEnd_toStartOf="@id/parkstrip"
                 android:fontFamily="@font/product_sans_bold"
                 android:textSize="24sp"
-                android:textColor="@color/black"
+                android:textColor="?attr/boldText"
                 android:text="@string/blank"/>
 <!--strip-->
             <TextView
@@ -382,7 +389,7 @@
                 app:layout_constraintEnd_toStartOf="@id/nopark"
                 android:fontFamily="@font/product_sans_bold"
                 android:textSize="24sp"
-                android:textColor="@color/black"
+                android:textColor="?attr/boldText"
                 android:text="@string/strips"/>
 <!--no parking-->
             <TextView
@@ -394,7 +401,7 @@
                 app:layout_constraintStart_toEndOf="@id/parkstrip"
                 android:fontFamily="@font/product_sans_bold"
                 android:textSize="24sp"
-                android:textColor="@color/black"
+                android:textColor="?attr/boldText"
                 android:text="@string/blank"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -451,7 +458,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     android:fontFamily="@font/product_sans_medium"
                     android:textSize="14sp"
-                    android:textColor="@color/supernatural"
+                    android:textColor="?attr/mediumText"
                     android:text="@string/time_slot"/>
 
                 <TextView
@@ -463,7 +470,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:fontFamily="@font/product_sans_medium"
                     android:textSize="18sp"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/mediumText"
                     android:text="@string/blank"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -484,7 +491,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     android:fontFamily="@font/product_sans_medium"
                     android:textSize="14sp"
-                    android:textColor="@color/supernatural"
+                    android:textColor="?attr/mediumText"
                     android:text="@string/price"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -505,7 +512,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         android:fontFamily="@font/product_sans_medium"
                         android:textSize="18sp"
-                        android:textColor="@color/supernatural"
+                        android:textColor="?attr/mediumText"
                         android:text="@string/rp"/>
 <!--nominal-->
                     <TextView
@@ -519,7 +526,7 @@
                         android:layout_marginStart="4dp"
                         android:fontFamily="@font/product_sans_medium"
                         android:textSize="18sp"
-                        android:textColor="@color/supernatural"
+                        android:textColor="?attr/mediumText"
                         android:text="@string/blank"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -570,7 +577,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:fontFamily="@font/product_sans_medium"
                 android:textSize="14sp"
-                android:textColor="@color/supernatural"
+                android:textColor="?attr/mediumText"
                 android:text="@string/loca"/>
 
             <TextView
@@ -582,7 +589,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:fontFamily="@font/product_sans_medium"
                 android:textSize="18sp"
-                android:textColor="@color/supernatural"
+                android:textColor="?attr/mediumText"
                 android:text="@string/blank"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -598,7 +605,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="@color/orange_yellow"
+        android:backgroundTint="?attr/mainbutton"
         android:fontFamily="@font/product_sans_bold"
         android:textSize="14sp"
         android:textColor="@color/black"

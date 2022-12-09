@@ -6,8 +6,11 @@
         <item name="colorPrimaryVariant">@color/sapphire_blue</item>
         <item name="colorOnPrimary">@color/black</item>
         <item name="bg">@color/chaos_black</item>
+        <item name="mainbackground">@color/blue_whale</item>
         <item name="boldText">@color/pixel_white</item>
+        <item name="maintextbold">@color/white</item>
         <item name="mediumText">@color/silver_polish</item>
+        <item name="maintextmedium">@color/white</item>
         <item name="regularText">@color/lynx_white</item>
         <item name="typing">@color/silver_polish</item>
         <item name="appbar">@color/chaos_black</item>
@@ -17,6 +20,10 @@
         <item name="inactivetab">@color/silver_polish</item>
         <item name="mainbg">@color/dark_blue</item>
         <item name="strokeField">@color/pixel_white</item>
+        <item name="cardmain">@color/shuttle_grey</item>
+        <item name="cardticket">@color/black</item>
+        <item name="mainfoot">@color/shuttle_grey</item>
+        <item name="mainbutton">@color/orange_yellow</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/peaceful_river</item>
         <item name="colorSecondaryVariant">@color/sapphire_blue</item>

@@ -8,6 +8,7 @@
     <color name="supernatural">#323643</color>
     <color name="big_stone">#313F4A</color>
     <color name="dark_grey">#363636</color>
+    <color name="shuttle_grey">#606470</color>
     <color name="british_shorthair">#606470</color>
     <color name="trolley_grey">#828282</color>
     <color name="shark_fin">#959595</color>
@@ -23,6 +24,7 @@
     <color name="peaceful_river">#469FD1</color>
     <color name="calgar_blue">#0386D0</color>
     <color name="sapphire_blue">#036BB9</color>
+    <color name="blue_whale">#003346</color>
     <color name="dark_blue">#313F4A</color>
     <color name="tealish_blue">#323643</color>
     <color name="gas_giant">#4D93DEFF</color>
@@ -42,6 +44,13 @@
     <attr format="color" name="mainbg"/>
     <attr format="color" name="mediumText"/>
     <attr format="color" name="strokeField"/>
+    <attr format="color" name="cardmain"/>
+    <attr format="color" name="maintextmedium"/>
+    <attr format="color" name="cardticket"/>
+    <attr format="color" name="maintextbold"/>
+    <attr format="color" name="mainbackground"/>
+    <attr format="color" name="mainfoot"/>
+    <attr format="color" name="mainbutton"/>
 
 
 </resources>
