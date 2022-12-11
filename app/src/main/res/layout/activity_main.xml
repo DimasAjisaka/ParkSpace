@@ -337,8 +337,9 @@
     <!--card ticket-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cardticket"
-        android:layout_width="350dp"
-        android:layout_height="210dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_ticket"
         app:layout_constraintTop_toBottomOf="@id/menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -346,16 +347,16 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="@drawable/cardticket"
-            android:backgroundTint="?attr/cardticket"
-            android:contentDescription="@string/cardticket"/>
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            android:background="@drawable/cardticket"-->
+<!--            android:backgroundTint="?attr/cardticket"-->
+<!--            android:contentDescription="@string/cardticket"/>-->
 <!--identitas no parking-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/noparking"
@@ -409,7 +410,7 @@
 <!--Line 1-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/line1"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/noparking"
             app:layout_constraintStart_toStartOf="parent"
@@ -421,7 +422,7 @@
             <!--Line 1-->
             <ImageView
                 android:id="@+id/line"
-                android:layout_width="300dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -433,7 +434,7 @@
 <!--time & price-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/group2"
-            android:layout_width="300dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/line1"
             app:layout_constraintStart_toStartOf="parent"
@@ -538,7 +539,7 @@
         <!--Line 2-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/line2"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/group2"
             app:layout_constraintStart_toStartOf="parent"
@@ -550,7 +551,7 @@
             <!--Line 1-->
             <ImageView
                 android:id="@+id/linetwo"
-                android:layout_width="300dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -587,6 +588,7 @@
                 app:layout_constraintTop_toBottomOf="@id/locattext"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="25dp"
                 android:fontFamily="@font/product_sans_medium"
                 android:textSize="18sp"
                 android:textColor="?attr/mediumText"

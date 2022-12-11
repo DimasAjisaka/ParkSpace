@@ -11,6 +11,7 @@ class AboutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.backarrow.setOnClickListener { finish() }
     }
 
     override fun onDestroy() {

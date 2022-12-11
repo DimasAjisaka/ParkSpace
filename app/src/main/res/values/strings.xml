@@ -74,4 +74,12 @@
     <string name="hours">Hours</string>
     <string name="money_bag">Money Bag</string>
     <string name="saldo">Saldo</string>
+    <string name="about_us">About Us</string>
+    <string name="by">By</string>
+    <string name="xlipse">XLIPSE:</string>
+    <string name="azzahra_ayu_vahendra">Azzahra Ayu Vahendra</string>
+    <string name="almira_dharma_utami_fadillah">Almira Dharma Utami Fadillah</string>
+    <string name="dhafin_taufiqi">Dhafin Taufiqi</string>
+    <string name="dimas_ajisaka_kurniawan">Dimas Ajisaka Kurniawan</string>
+    <string name="rangga_kalam_sidiq">Rangga Kalam Sidiq</string>
 </resources>
