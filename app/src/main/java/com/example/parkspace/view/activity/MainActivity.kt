@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 //        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         binding.profiles.setOnClickListener { startActivity(Intent(this, ProfilActivity::class.java)) }
+        binding.button.setOnClickListener { startActivity(Intent(this, BookingActivity::class.java)) }
     }
 
     override fun onDestroy() {

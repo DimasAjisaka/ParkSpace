@@ -24,10 +24,12 @@
     <color name="peaceful_river">#469FD1</color>
     <color name="calgar_blue">#0386D0</color>
     <color name="sapphire_blue">#036BB9</color>
+    <color name="deap_sea_blue">#00517E</color>
     <color name="blue_whale">#003346</color>
     <color name="dark_blue">#313F4A</color>
     <color name="tealish_blue">#323643</color>
     <color name="gas_giant">#4D93DEFF</color>
+    <color name="glacier">#88B7CF</color>
     <color name="cherry_paddle_pop">#FB344F</color>
     <color name="hawaiian_passion">#FFA53C</color>
     <color name="orange_yellow">#FFD953</color>
@@ -51,6 +53,10 @@
     <attr format="color" name="mainbackground"/>
     <attr format="color" name="mainfoot"/>
     <attr format="color" name="mainbutton"/>
+    <attr format="color" name="floorbg"/>
+    <attr format="color" name="bgcf"/>
+    <attr format="color" name="activetext"/>
+    <attr format="color" name="inactivetext"/>
 
 
 </resources>

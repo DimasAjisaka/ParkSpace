@@ -24,6 +24,10 @@
         <item name="cardticket">@color/white</item>
         <item name="mainfoot">@color/tealish_blue</item>
         <item name="mainbutton">@color/orange_yellow</item>
+        <item name="floorbg">@color/deap_sea_blue</item>
+        <item name="bgcf">@color/supernatural</item>
+        <item name="activetext">@color/bluish_cyan</item>
+        <item name="inactivetext">@color/glacier</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/peaceful_river</item>
         <item name="colorSecondaryVariant">@color/sapphire_blue</item>
@@ -32,10 +36,19 @@
         <item name="android:statusBarColor">@color/frozen</item>
         <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
     </style>
 
     <style name="tablayText" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:fontFamily">@font/product_sans_bold</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Bottom Sheet -->
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottomsheet</item>
+    </style>
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
     </style>
 </resources>
