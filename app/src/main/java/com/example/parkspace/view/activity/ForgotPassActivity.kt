@@ -20,22 +20,6 @@ class ForgotPassActivity : AppCompatActivity() {
         _binding = ActivityForgotPassBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(ForgotPass())
-
-        val window: Window = window
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-
-        val view = getWindow().decorView
-        when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK){
-            Configuration.UI_MODE_NIGHT_YES -> {
-                window.statusBarColor = Color.parseColor("#101010")
-                view.systemUiVisibility = view.systemUiVisibility and View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR.inv()
-            }
-            Configuration.UI_MODE_NIGHT_NO -> {
-                window.statusBarColor = Color.parseColor("#F7F7F7")
-                view.systemUiVisibility = view.systemUiVisibility and View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-            }
-        }
     }
 
     override fun onDestroy() {

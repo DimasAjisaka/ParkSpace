@@ -33,7 +33,7 @@
         <item name="colorSecondaryVariant">@color/sapphire_blue</item>
         <item name="colorOnSecondary">@color/sapphire_blue</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/frozen</item>
+        <item name="android:statusBarColor">@color/lynx_white</item>
         <item name="android:windowLightStatusBar">true</item>
         <!-- Customize your theme here. -->
         <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
