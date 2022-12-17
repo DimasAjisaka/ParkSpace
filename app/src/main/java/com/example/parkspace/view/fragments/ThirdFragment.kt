@@ -8,13 +8,23 @@ import android.view.ViewGroup
 import com.example.parkspace.R
 import com.example.parkspace.databinding.FragmentSignInBinding
 import com.example.parkspace.databinding.FragmentThirdBinding
+import com.example.parkspace.databinding.TicketBottomSheetBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 
 class ThirdFragment : Fragment() {
     private var _binding: FragmentThirdBinding? = null
     private val binding get() = _binding!!
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        //bottom sheet
+        super.onViewCreated(view, savedInstanceState)
+        val dialog = context?.let { BottomSheetDialog(it) }
+        val dialogBinding = TicketBottomSheetBinding.inflate(layoutInflater)
+        dialog?.setContentView(dialogBinding.root)
+        binding.button.setOnClickListener { dialog?.show() }
+        dialogBinding.button.setOnClickListener { activity?.finish() }
+        dialog?.setCancelable(false)
+        dialogBinding.close.setOnClickListener { dialog?.dismiss() }
     }
 
     override fun onCreateView(
