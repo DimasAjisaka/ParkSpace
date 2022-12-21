@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.fragments.VerifyEmail">
+    tools:context=".view.fragments.VerifyEmail"
+    android:id="@+id/constraintLayoutRoot">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -109,13 +110,14 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="38dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/code1"
                     android:layout_width="58dp"
                     android:layout_height="64dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/code2"
                     android:layout_marginTop="6dp"
                     android:background="@drawable/code_field"
                     android:padding="10dp"
@@ -128,13 +130,14 @@
                     android:imeOptions="actionNext"
                     android:importantForAutofill="no"/>
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/code2"
                     android:layout_width="58dp"
                     android:layout_height="64dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/code1"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/code3"
                     android:layout_marginStart="14dp"
                     android:layout_marginTop="6dp"
                     android:background="@drawable/code_field"
@@ -148,13 +151,14 @@
                     android:imeOptions="actionNext"
                     android:importantForAutofill="no"/>
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/code3"
                     android:layout_width="58dp"
                     android:layout_height="64dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/code2"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/code4"
                     android:layout_marginStart="14dp"
                     android:layout_marginTop="6dp"
                     android:background="@drawable/code_field"
@@ -168,13 +172,14 @@
                     android:imeOptions="actionNext"
                     android:importantForAutofill="no"/>
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/code4"
                     android:layout_width="58dp"
                     android:layout_height="64dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toEndOf="@id/code3"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginStart="14dp"
                     android:layout_marginTop="6dp"
                     android:background="@drawable/code_field"
@@ -231,8 +236,7 @@
                 android:text="@string/verify"
                 android:textSize="14sp"
                 android:backgroundTint="@color/calgar_blue"
-                android:textAllCaps="false"
-                app:circularflow_radiusInDP="50"/>
+                android:textAllCaps="false"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

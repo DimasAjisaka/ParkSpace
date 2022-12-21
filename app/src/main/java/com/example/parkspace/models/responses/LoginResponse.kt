@@ -8,7 +8,7 @@ data class LoginResponse(
 	val phoneNumber: String? = null,
 
 	@field:SerializedName("roles")
-	val roles: List<String?>? = null,
+	val roles: List<String>?,
 
 	@field:SerializedName("id")
 	val id: String? = null,

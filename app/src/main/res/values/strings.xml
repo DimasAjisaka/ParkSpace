@@ -108,4 +108,27 @@
     <string name="estimation">Estimation</string>
     <string name="close">Close</string>
     <string name="done">Done</string>
+    <string name="username">Username</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="please_wait">Please Wait...</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="update_your_profile">Update Your Profile</string>
+    <string name="upload_a_photo_under_5_mb">Upload a photo under 5 mb</string>
+    <string name="upload">Upload</string>
+    <string name="xlipse2">XLIPSE</string>
+    <string name="aplikasi_parkspace_ini_hadir_agar_memudahkan_user_untuk_membooking_parkir_secara_online_jadi_ketika_sudah_sampai_di_tempat_parkir_user_sudah_mengetahui_dibagian_mana_kita_harus_parkir_tanpa_harus_mencari_sendiri_lahan_parkir_yang_kosong_itu_disebelah_mana">Aplikasi ParkSpace ini hadir agar memudahkan user untuk membooking parkir secara online, jadi ketika sudah sampai di tempat parkir user sudah mengetahui dibagian mana kita harus parkir tanpa harus mencari sendiri lahan parkir yang kosong itu disebelah mana.</string>
+    <string name="dengan_begitu_diharapkan_dapat_lebih_mengefisienkan_waktu_dan_dapat_mempermudah_untuk_pencarian_parkir">Dengan begitu diharapkan dapat lebih mengefisienkan waktu dan dapat mempermudah untuk pencarian parkir.</string>
+    <string name="strip">-</string>
+    <string name="team">Team</string>
+    <string name="almira_d_u_f">Almira D. U. F.</string>
+    <string name="sa_documentation"><![CDATA[SA & Documentation]]></string>
+    <string name="azzahra_a_f">Azzahra A. F.</string>
+    <string name="ui_ux_designer_sqa"><![CDATA[UI/UX Designer & SQA]]></string>
+    <string name="dimas_a_k">Dimas A. K.</string>
+    <string name="mobile_developer">Mobile Developer</string>
+    <string name="dhafin_t">Dhafin T.</string>
+    <string name="project_manager">Project Manager</string>
+    <string name="rangga_k_s">Rangga K. S.</string>
+    <string name="backend_developer">Backend Developer</string>
 </resources>

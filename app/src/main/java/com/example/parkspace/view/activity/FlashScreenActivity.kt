@@ -9,6 +9,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.parkspace.databinding.ActivityFlashScreenBinding
+import com.example.parkspace.utils.UserPreverence
 
 class FlashScreenActivity : AppCompatActivity() {
     private var _binding: ActivityFlashScreenBinding? = null
@@ -18,6 +19,11 @@ class FlashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityFlashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //check
+        val userPreverence = UserPreverence(this)
+
+
 //        supportActionBar?.hide()
 //        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         @Suppress("DEPRECATION")
@@ -68,11 +74,18 @@ class FlashScreenActivity : AppCompatActivity() {
                 startActivity(Intent(this@FlashScreenActivity, OnBoardingActivity::class.java))
                 finish()
             } else {
-                startActivity(Intent(this@FlashScreenActivity, SignActivity::class.java))
-                finish()
+                if (userPreverence.getLogin()!!){
+                    startActivity(Intent(this@FlashScreenActivity, MainActivity::class.java))
+                    finish()
+                } else {
+                    startActivity(Intent(this@FlashScreenActivity, SignActivity::class.java))
+                    finish()
+                }
             }
         }), splashDuration)
     }
+
+
 
     override fun onDestroy() {
         super.onDestroy()

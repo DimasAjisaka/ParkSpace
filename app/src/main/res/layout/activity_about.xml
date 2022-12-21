@@ -46,139 +46,516 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/pslogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/top"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/pslogo"
-        android:contentDescription="@string/icon" />
-
-    <TextView
-        android:id="@+id/logodesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/pslogo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="18dp"
-        android:fontFamily="@font/product_sans_bold"
-        android:textColor="?attr/boldText"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:text="@string/parkspace"/>
-
-    <TextView
-        android:id="@+id/by"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/logodesc"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/product_sans_bold"
-        android:textColor="?attr/boldText"
-        android:textSize="20sp"
-        android:textAlignment="center"
-        android:text="@string/by"/>
-
-    <TextView
-        android:id="@+id/xlipse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/by"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/product_sans_bold"
-        android:textColor="?attr/boldText"
-        android:textSize="30sp"
-        android:textAlignment="center"
-        android:text="@string/xlipse"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/xlipse"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp">
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp">
 
-        <TextView
-            android:id="@+id/name1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:fontFamily="@font/product_sans_medium"
-            android:textColor="?attr/mediumText"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:text="@string/azzahra_ayu_vahendra"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/h1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp">
 
-        <TextView
-            android:id="@+id/name2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/name1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/product_sans_medium"
-            android:textColor="?attr/mediumText"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:text="@string/almira_dharma_utami_fadillah"/>
+<!-- g1 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/g1"
+                android:layout_width="166dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/name3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/name2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/product_sans_medium"
-            android:textColor="?attr/mediumText"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:text="@string/dhafin_taufiqi"/>
+                <TextView
+                    android:id="@+id/parkspace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textSize="24sp"
+                    android:textColor="?attr/boldText"
+                    android:text="@string/parkspace"/>
 
-        <TextView
-            android:id="@+id/name4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/name3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/product_sans_medium"
-            android:textColor="?attr/mediumText"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:text="@string/dimas_ajisaka_kurniawan"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/g11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/parkspace"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
-        <TextView
-            android:id="@+id/name5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/name4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/product_sans_medium"
-            android:textColor="?attr/mediumText"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:text="@string/rangga_kalam_sidiq"/>
+                    <TextView
+                        android:id="@+id/by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/xlipse"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textSize="20sp"
+                        android:textColor="?attr/mediumText"
+                        android:textAlignment="center"
+                        android:text="@string/by"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/xlipse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="24sp"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/xlipse2"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--  g2 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/g2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/g1"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/decsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/product_sans_regular"
+                    android:textColor="?attr/regularText"
+                    android:textAlignment="textEnd"
+                    android:textSize="14sp"
+                    android:text="@string/aplikasi_parkspace_ini_hadir_agar_memudahkan_user_untuk_membooking_parkir_secara_online_jadi_ketika_sudah_sampai_di_tempat_parkir_user_sudah_mengetahui_dibagian_mana_kita_harus_parkir_tanpa_harus_mencari_sendiri_lahan_parkir_yang_kosong_itu_disebelah_mana"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- ps2 -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/g3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/g2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/pslogo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/pstext"
+                    android:background="@drawable/pslogo"
+                    android:elevation="2dp"
+                    android:contentDescription="@string/pslogo" />
+
+                <TextView
+                    android:id="@+id/pstext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/pslogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textSize="36sp"
+                    android:textAlignment="center"
+                    android:textColor="?attr/boldText"
+                    android:text="@string/parkspace"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- hope -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/g4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/g3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/hope"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/product_sans_regular"
+                    android:textSize="14sp"
+                    android:textColor="?attr/regularText"
+                    android:textAlignment="textStart"
+                    android:text="@string/dengan_begitu_diharapkan_dapat_lebih_mengefisienkan_waktu_dan_dapat_mempermudah_untuk_pencarian_parkir"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- xlipse team text -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/g5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/g4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/t2"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textSize="24sp"
+                    android:textAlignment="center"
+                    android:textColor="?attr/boldText"
+                    android:text="@string/xlipse2"/>
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/t1"
+                    app:layout_constraintEnd_toStartOf="@id/t3"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textSize="24sp"
+                    android:textAlignment="center"
+                    android:textColor="?attr/boldText"
+                    android:text="@string/strip"/>
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/t2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:textSize="24sp"
+                    android:textAlignment="center"
+                    android:textColor="?attr/boldText"
+                    android:text="@string/team"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- team -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/g6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/g5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/team"
+                    android:contentDescription="@string/team" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- team desc -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/g7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/g6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/d1"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/d2">
+
+                    <ImageView
+                        android:id="@+id/p1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/almira"
+                        android:contentDescription="@string/almira_dharma_utami_fadillah" />
+
+                    <TextView
+                        android:id="@+id/n1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/p1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/almira_d_u_f"/>
+
+                    <TextView
+                        android:id="@+id/j1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/n1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_regular"
+                        android:textSize="14sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/regularText"
+                        android:text="@string/sa_documentation"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/d2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/d1"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/p2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/azzahra"
+                        android:contentDescription="@string/almira_dharma_utami_fadillah" />
+
+                    <TextView
+                        android:id="@+id/n2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/p2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/azzahra_a_f"/>
+
+                    <TextView
+                        android:id="@+id/j2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/n2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_regular"
+                        android:textSize="14sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/regularText"
+                        android:text="@string/ui_ux_designer_sqa"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/g8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/g7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/d3"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/d4">
+
+                    <ImageView
+                        android:id="@+id/p3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/dimas"
+                        android:contentDescription="@string/almira_dharma_utami_fadillah" />
+
+                    <TextView
+                        android:id="@+id/n3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/p3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/dimas_a_k"/>
+
+                    <TextView
+                        android:id="@+id/j3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/n3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_regular"
+                        android:textSize="14sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/regularText"
+                        android:text="@string/mobile_developer"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/d4"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/d3"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/p4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/dhafin"
+                        android:contentDescription="@string/almira_dharma_utami_fadillah" />
+
+                    <TextView
+                        android:id="@+id/n4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/p4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/dhafin_t"/>
+
+                    <TextView
+                        android:id="@+id/j4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/n4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_regular"
+                        android:textSize="14sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/regularText"
+                        android:text="@string/project_manager"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/g9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/g8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/d5"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/p5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/rangga"
+                        android:contentDescription="@string/almira_dharma_utami_fadillah" />
+
+                    <TextView
+                        android:id="@+id/n5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/p5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/rangga_k_s"/>
+
+                    <TextView
+                        android:id="@+id/j5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/n5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/product_sans_regular"
+                        android:textSize="14sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/regularText"
+                        android:text="@string/backend_developer"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

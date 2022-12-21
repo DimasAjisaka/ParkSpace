@@ -1,3 +1,5 @@
 package com.example.parkspace.models.data
 
-data class LogoutModel()
+data class LogoutModel(
+    val token: String?
+)

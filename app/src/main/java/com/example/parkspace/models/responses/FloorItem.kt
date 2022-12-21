@@ -2,7 +2,7 @@ package com.example.parkspace.models.responses
 
 import com.google.gson.annotations.SerializedName
 
-data class FloorResponseItem(
+data class FloorItem(
 
 	@field:SerializedName("floor_name")
 	val floorName: String? = null,

@@ -79,12 +79,44 @@
                 android:textColorHint="?attr/typing"
                 android:inputType="textEmailAddress"/>
 
+            <!-- Username -->
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/inputemail"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/product_sans_medium"
+                android:textSize="14sp"
+                android:textColor="?attr/mediumText"
+                android:text="@string/username"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputusername"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/username"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bg_field"
+                android:padding="10dp"
+                android:hint="@string/enter_your_username"
+                android:textSize="14sp"
+                android:textColor="?attr/regularText"
+                android:textColorHint="?attr/typing"
+                android:inputType="text"/>
+
             <!-- Phone Number -->
             <TextView
                 android:id="@+id/phonum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/inputemail"
+                app:layout_constraintTop_toBottomOf="@id/inputusername"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="16dp"
                 android:layout_marginStart="30dp"

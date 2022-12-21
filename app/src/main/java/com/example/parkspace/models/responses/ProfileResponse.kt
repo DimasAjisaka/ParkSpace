@@ -1,7 +1,10 @@
 package com.example.parkspace.models.responses
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class ProfileResponse(
 
 	@field:SerializedName("image")
@@ -11,10 +14,10 @@ data class ProfileResponse(
 	val phoneNumber: String? = null,
 
 	@field:SerializedName("address")
-	val address: Any? = null,
+	val address: String? = null,
 
 	@field:SerializedName("success")
-	val success: Boolean? = null,
+	val success: Boolean? = false,
 
 	@field:SerializedName("name")
 	val name: String? = null,
@@ -24,4 +27,4 @@ data class ProfileResponse(
 
 	@field:SerializedName("username")
 	val username: String? = null
-)
+) : Parcelable

@@ -4,6 +4,6 @@ import com.google.gson.annotations.SerializedName
 
 data class FloorResponse(
 
-	@field:SerializedName("FloorResponse")
-	val floorResponse: List<FloorResponseItem?>? = null
+//	@field:SerializedName("FloorResponse")
+	val floorResponse: List<FloorItem>?
 )
