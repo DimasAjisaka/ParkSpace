@@ -24,7 +24,7 @@ class ThirdFragment : Fragment() {
         binding.button.setOnClickListener { dialog?.show() }
         dialogBinding.button.setOnClickListener { activity?.finish() }
         dialog?.setCancelable(false)
-        dialogBinding.close.setOnClickListener { dialog?.dismiss() }
+//        dialogBinding.close.setOnClickListener { dialog?.dismiss() }
     }
 
     override fun onCreateView(

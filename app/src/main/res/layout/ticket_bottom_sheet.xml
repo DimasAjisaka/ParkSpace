@@ -29,16 +29,16 @@
             android:textColor="?attr/boldText"
             android:text="@string/parkspace"/>
 
-        <ImageView
-            android:id="@+id/close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/ic_baseline_close_24"
-            android:backgroundTint="?attr/boldText"
-            android:contentDescription="@string/close" />
+<!--        <ImageView-->
+<!--            android:id="@+id/close"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:background="@drawable/ic_baseline_close_24"-->
+<!--            android:backgroundTint="?attr/boldText"-->
+<!--            android:contentDescription="@string/close" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -94,147 +94,15 @@
         android:background="@drawable/line_18"
         android:contentDescription="@string/line1" />
 
-    <!--time & price-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/g2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/line"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/time"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:id="@+id/timetext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="14sp"
-                android:textColor="?attr/mediumText"
-                android:text="@string/time_slot"/>
-
-            <TextView
-                android:id="@+id/timeslot"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/timetext"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="18sp"
-                android:textColor="?attr/mediumText"
-                android:text="@string/blank"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/price"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/time"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/pricetext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="14sp"
-                android:textColor="?attr/mediumText"
-                android:text="@string/price"/>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/pricedetail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/pricetext"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent">
-
-                <TextView
-                    android:id="@+id/rupiah"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:fontFamily="@font/product_sans_medium"
-                    android:textSize="18sp"
-                    android:textColor="?attr/mediumText"
-                    android:text="@string/rp"/>
-                <!--nominal-->
-                <TextView
-                    android:id="@+id/nominal"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/rupiah"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginStart="4dp"
-                    android:fontFamily="@font/product_sans_medium"
-                    android:textSize="18sp"
-                    android:textColor="?attr/mediumText"
-                    android:text="@string/blank"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--Line 1-->
-        <ImageView
-            android:id="@+id/line2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/g2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/line_18"
-            android:contentDescription="@string/line1" />
-
-    <TextView
-        android:id="@+id/more"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/line2"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/product_sans_medium"
-        android:textSize="14sp"
-        android:textColor="?attr/mediumText"
-        android:text="@string/more_information"/>
-
     <!--more-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/g3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/more"
+        app:layout_constraintTop_toBottomOf="@id/line"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp">
 

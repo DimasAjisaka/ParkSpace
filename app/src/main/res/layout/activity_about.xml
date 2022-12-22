@@ -372,7 +372,7 @@
                         android:textSize="20sp"
                         android:textAlignment="center"
                         android:textColor="?attr/boldText"
-                        android:text="@string/azzahra_a_f"/>
+                        android:text="@string/azzahra_a_v"/>
 
                     <TextView
                         android:id="@+id/j2"

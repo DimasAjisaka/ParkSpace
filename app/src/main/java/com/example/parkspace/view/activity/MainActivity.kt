@@ -26,6 +26,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.parkspace.R
 import com.example.parkspace.databinding.ActivityMainBinding
 import com.example.parkspace.models.data.RefreshTokenModel
+import com.example.parkspace.models.data.TicketModel
 import com.example.parkspace.utils.Resource
 import com.example.parkspace.utils.UserPreverence
 import com.example.parkspace.viewmodels.AuthViewModel
@@ -96,7 +97,12 @@ class MainActivity : AppCompatActivity() {
                 when(it){
                     is Resource.Loading -> {  }
                     is Resource.Success -> {
+                        val response = it.data
                         binding.name.text = getFirstName(it.data.name)
+                        binding.codepark.text = response.floor
+                        binding.nopark.text = response.slot.toString()
+                        binding.nominal.text = response.total.toString()
+                        binding.timeslot.text = response.timeString
                     }
                     is Resource.Error -> {
                         Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
@@ -203,6 +209,26 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+//    private fun setUpTicket(){
+//        floorViewModel.ticket(TicketModel("A", slot.toString()),userPreverence.getToken()!!).observe(viewLifecycleOwner){
+//            if (it != null){
+//                when(it){
+//                    is Resource.Loading -> loadingDialog?.showDialog()
+//                    is Resource.Success -> {
+//                        loadingDialog?.hideDialog()
+//                        val response = it.data[0]
+//
+//                    }
+//                    is Resource.Error -> {
+//                        loadingDialog?.hideDialog()
+//                        Toast.makeText(context,it.message,Toast.LENGTH_LONG).show()
+//
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     override fun isActivityTransitionRunning(): Boolean {
         return super.isActivityTransitionRunning()
