@@ -7,765 +7,779 @@
     android:background="?attr/bgcf"
     tools:context=".view.fragments.FirstFloor">
 
-<!-- color code -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/colorcode"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp">
+        android:layout_height="match_parent">
 
-<!-- color 1 -->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/color1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            android:id="@+id/all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/cchosen"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@color/hawaiian_passion"
-                android:contentDescription="@string/color1" />
-
-            <TextView
-                android:id="@+id/tchosen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/cchosen"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/product_sans_bold"
-                android:textSize="12sp"
-                android:textColor="@color/lynx_white"
-                android:text="@string/choosen"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- color 2 -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/color2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/color1"
-            app:layout_constraintEnd_toStartOf="@id/color3"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <ImageView
-                android:id="@+id/cava"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@color/bluish_cyan"
-                android:contentDescription="@string/color1" />
-
-            <TextView
-                android:id="@+id/tava"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/cava"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/product_sans_bold"
-                android:textSize="12sp"
-                android:textColor="@color/lynx_white"
-                android:text="@string/available"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!-- color 3 -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/color3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <ImageView
-                android:id="@+id/cfill"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@color/shuttle_grey"
-                android:contentDescription="@string/color1" />
-
-            <TextView
-                android:id="@+id/tfill"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/cfill"
-                android:layout_marginStart="10dp"
-                android:fontFamily="@font/product_sans_bold"
-                android:textSize="12sp"
-                android:textColor="@color/lynx_white"
-                android:text="@string/filled"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!-- Parking Map -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/parkmap"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        app:layout_constraintTop_toBottomOf="@id/colorcode"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp">
-
-<!-- gorup 1 -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/g1"
-            android:layout_width="84dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <ImageView
-                android:id="@+id/map1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@drawable/line_1_11"
-                android:backgroundTint="@color/white"
-                android:contentDescription="@string/map1" />
-            
-            <FrameLayout
-                android:id="@+id/a1"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a2"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a1"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="34dp"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a3"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a2"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="6dp"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a4"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a3"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="6dp"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a5"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a4"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="6dp"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a6"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a5"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="6dp"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a7"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a6"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="6dp"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a8"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a7"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="6dp"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a9"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a8"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="6dp"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a10"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a9"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="6dp"
-                android:background="@color/bluish_cyan"/>
-
-            <FrameLayout
-                android:id="@+id/a11"
-                android:layout_width="49dp"
-                android:layout_height="24dp"
-                app:layout_constraintBottom_toTopOf="@id/a10"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginBottom="34dp"
-                android:background="@color/bluish_cyan"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!-- group 2 -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/g2"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/g1"
-            app:layout_constraintEnd_toStartOf="@id/g3">
-
-            <!-- 41 - 44 -->
+            <!-- color code -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/top"
-                android:layout_width="111dp"
-                android:layout_height="83dp"
+                android:id="@+id/colorcode"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
 
-                <ImageView
-                    android:id="@+id/map5"
+                <!-- color 1 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/color1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:background="@drawable/line_41_44"
-                    android:backgroundTint="@color/white"
-                    android:contentDescription="@string/map5" />
-                
-                <FrameLayout
-                    android:id="@+id/a41"
-                    android:layout_width="24dp"
-                    android:layout_height="49dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/a42"
-                    android:background="@color/bluish_cyan"/>
+                    app:layout_constraintBottom_toBottomOf="parent">
 
-                <FrameLayout
-                    android:id="@+id/a42"
-                    android:layout_width="24dp"
-                    android:layout_height="49dp"
-                    app:layout_constraintStart_toEndOf="@id/a41"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/a43"
-                    android:layout_marginStart="5dp"
-                    android:background="@color/bluish_cyan"/>
+                    <ImageView
+                        android:id="@+id/cchosen"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@color/hawaiian_passion"
+                        android:contentDescription="@string/color1" />
 
-                <FrameLayout
-                    android:id="@+id/a43"
-                    android:layout_width="24dp"
-                    android:layout_height="49dp"
-                    app:layout_constraintStart_toEndOf="@id/a42"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/a44"
-                    android:layout_marginStart="5dp"
-                    android:background="@color/bluish_cyan"/>
+                    <TextView
+                        android:id="@+id/tchosen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/cchosen"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="12sp"
+                        android:textColor="@color/lynx_white"
+                        android:text="@string/choosen"/>
 
-                <FrameLayout
-                    android:id="@+id/a44"
-                    android:layout_width="24dp"
-                    android:layout_height="49dp"
-                    app:layout_constraintStart_toEndOf="@id/a43"
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- color 2 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/color2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/color1"
+                    app:layout_constraintEnd_toStartOf="@id/color3"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/cava"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@color/bluish_cyan"
+                        android:contentDescription="@string/color1" />
+
+                    <TextView
+                        android:id="@+id/tava"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/cava"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="12sp"
+                        android:textColor="@color/lynx_white"
+                        android:text="@string/available"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- color 3 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/color3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginStart="5dp"
-                    android:background="@color/bluish_cyan"/>
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/cfill"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@color/shuttle_grey"
+                        android:contentDescription="@string/color1" />
+
+                    <TextView
+                        android:id="@+id/tfill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/cfill"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="12sp"
+                        android:textColor="@color/lynx_white"
+                        android:text="@string/filled"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- 12-29 -->
+            <!-- Parking Map -->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/mid"
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/top"
-                app:layout_constraintBottom_toTopOf="@id/bot"
+                android:id="@+id/parkmap"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                app:layout_constraintTop_toBottomOf="@id/colorcode"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="35dp"
-                android:layout_marginBottom="35dp">
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
 
-                <!-- 12-20  -->
+                <!-- gorup 1 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/left"
-                    android:layout_width="50dp"
+                    android:id="@+id/g1"
+                    android:layout_width="84dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
 
+                    <ImageView
+                        android:id="@+id/map1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@drawable/line_1_11"
+                        android:backgroundTint="@color/white"
+                        android:contentDescription="@string/map1" />
+
                     <FrameLayout
-                        android:id="@+id/a12"
+                        android:id="@+id/a1"
                         android:layout_width="49dp"
                         android:layout_height="24dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:background="@color/bluish_cyan"/>
 
                     <FrameLayout
-                        android:id="@+id/a13"
+                        android:id="@+id/a2"
                         android:layout_width="49dp"
                         android:layout_height="24dp"
-                        app:layout_constraintBottom_toTopOf="@id/a12"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/a1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginBottom="34dp"
+                        android:background="@color/bluish_cyan"/>
+
+                    <FrameLayout
+                        android:id="@+id/a3"
+                        android:layout_width="49dp"
+                        android:layout_height="24dp"
+                        app:layout_constraintBottom_toTopOf="@id/a2"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="6dp"
                         android:background="@color/bluish_cyan"/>
 
                     <FrameLayout
-                        android:id="@+id/a14"
+                        android:id="@+id/a4"
                         android:layout_width="49dp"
                         android:layout_height="24dp"
-                        app:layout_constraintBottom_toTopOf="@id/a13"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/a3"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="6dp"
                         android:background="@color/bluish_cyan"/>
 
                     <FrameLayout
-                        android:id="@+id/a15"
+                        android:id="@+id/a5"
                         android:layout_width="49dp"
                         android:layout_height="24dp"
-                        app:layout_constraintBottom_toTopOf="@id/a14"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/a4"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="6dp"
                         android:background="@color/bluish_cyan"/>
 
                     <FrameLayout
-                        android:id="@+id/a16"
+                        android:id="@+id/a6"
                         android:layout_width="49dp"
                         android:layout_height="24dp"
-                        app:layout_constraintBottom_toTopOf="@id/a15"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/a5"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="6dp"
                         android:background="@color/bluish_cyan"/>
 
                     <FrameLayout
-                        android:id="@+id/a17"
+                        android:id="@+id/a7"
                         android:layout_width="49dp"
                         android:layout_height="24dp"
-                        app:layout_constraintBottom_toTopOf="@id/a16"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/a6"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="6dp"
                         android:background="@color/bluish_cyan"/>
 
                     <FrameLayout
-                        android:id="@+id/a18"
+                        android:id="@+id/a8"
                         android:layout_width="49dp"
                         android:layout_height="24dp"
-                        app:layout_constraintBottom_toTopOf="@id/a17"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/a7"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="6dp"
                         android:background="@color/bluish_cyan"/>
 
                     <FrameLayout
-                        android:id="@+id/a19"
+                        android:id="@+id/a9"
                         android:layout_width="49dp"
                         android:layout_height="24dp"
-                        app:layout_constraintBottom_toTopOf="@id/a18"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/a8"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="6dp"
                         android:background="@color/bluish_cyan"/>
 
                     <FrameLayout
-                        android:id="@+id/a20"
+                        android:id="@+id/a10"
                         android:layout_width="49dp"
                         android:layout_height="24dp"
-                        app:layout_constraintBottom_toTopOf="@id/a19"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/a9"
+                        app:layout_constraintEnd_toEndOf="parent"
                         android:layout_marginBottom="6dp"
+                        android:background="@color/bluish_cyan"/>
+
+                    <FrameLayout
+                        android:id="@+id/a11"
+                        android:layout_width="49dp"
+                        android:layout_height="24dp"
+                        app:layout_constraintBottom_toTopOf="@id/a10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginBottom="34dp"
                         android:background="@color/bluish_cyan"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/map2"
-                    android:layout_width="wrap_content"
+                <!-- group 2 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/g2"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/left"
-                    app:layout_constraintEnd_toStartOf="@id/right"
-                    android:background="@drawable/line_12_29"
-                    android:backgroundTint="@color/white"
-                    android:contentDescription="@string/map2" />
+                    app:layout_constraintStart_toEndOf="@id/g1"
+                    app:layout_constraintEnd_toStartOf="@id/g3">
 
-                <!-- 21-30  -->
+                    <!-- 41 - 44 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/top"
+                        android:layout_width="111dp"
+                        android:layout_height="83dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:id="@+id/map5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:background="@drawable/line_41_44"
+                            android:backgroundTint="@color/white"
+                            android:contentDescription="@string/map5" />
+
+                        <FrameLayout
+                            android:id="@+id/a41"
+                            android:layout_width="24dp"
+                            android:layout_height="49dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/a42"
+                            android:background="@color/bluish_cyan"/>
+
+                        <FrameLayout
+                            android:id="@+id/a42"
+                            android:layout_width="24dp"
+                            android:layout_height="49dp"
+                            app:layout_constraintStart_toEndOf="@id/a41"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/a43"
+                            android:layout_marginStart="5dp"
+                            android:background="@color/bluish_cyan"/>
+
+                        <FrameLayout
+                            android:id="@+id/a43"
+                            android:layout_width="24dp"
+                            android:layout_height="49dp"
+                            app:layout_constraintStart_toEndOf="@id/a42"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/a44"
+                            android:layout_marginStart="5dp"
+                            android:background="@color/bluish_cyan"/>
+
+                        <FrameLayout
+                            android:id="@+id/a44"
+                            android:layout_width="24dp"
+                            android:layout_height="49dp"
+                            app:layout_constraintStart_toEndOf="@id/a43"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginStart="5dp"
+                            android:background="@color/bluish_cyan"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- 12-29 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/mid"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/top"
+                        app:layout_constraintBottom_toTopOf="@id/bot"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginBottom="35dp">
+
+                        <!-- 12-20  -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/left"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <FrameLayout
+                                android:id="@+id/a12"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a13"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/a12"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginBottom="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a14"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/a13"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginBottom="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a15"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/a14"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginBottom="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a16"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/a15"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginBottom="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a17"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/a16"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginBottom="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a18"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/a17"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginBottom="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a19"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/a18"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginBottom="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a20"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintBottom_toTopOf="@id/a19"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginBottom="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <ImageView
+                            android:id="@+id/map2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/left"
+                            app:layout_constraintEnd_toStartOf="@id/right"
+                            android:background="@drawable/line_12_29"
+                            android:backgroundTint="@color/white"
+                            android:contentDescription="@string/map2" />
+
+                        <!-- 21-30  -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/right"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <FrameLayout
+                                android:id="@+id/a21"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a22"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a21"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a23"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a22"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a24"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a23"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a25"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a24"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a26"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a25"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a27"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a26"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a28"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a27"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a29"
+                                android:layout_width="49dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a28"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- 37-40 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/bot"
+                        android:layout_width="111dp"
+                        android:layout_height="83dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <FrameLayout
+                            android:id="@+id/a37"
+                            android:layout_width="24dp"
+                            android:layout_height="49dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/a38"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@color/bluish_cyan"/>
+
+                        <FrameLayout
+                            android:id="@+id/a38"
+                            android:layout_width="24dp"
+                            android:layout_height="49dp"
+                            app:layout_constraintStart_toEndOf="@id/a37"
+                            app:layout_constraintEnd_toStartOf="@id/a39"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@color/bluish_cyan"
+                            android:layout_marginStart="5dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/a39"
+                            android:layout_width="24dp"
+                            android:layout_height="49dp"
+                            app:layout_constraintStart_toEndOf="@id/a38"
+                            app:layout_constraintEnd_toStartOf="@id/a40"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@color/bluish_cyan"
+                            android:layout_marginStart="5dp"/>
+
+                        <FrameLayout
+                            android:id="@+id/a40"
+                            android:layout_width="24dp"
+                            android:layout_height="49dp"
+                            app:layout_constraintStart_toEndOf="@id/a39"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@color/bluish_cyan"
+                            android:layout_marginStart="5dp"/>
+
+                        <ImageView
+                            android:id="@+id/map4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:background="@drawable/line_37_40"
+                            android:backgroundTint="@color/white"
+                            android:contentDescription="@string/map4" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- group 3 -->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/right"
-                    android:layout_width="50dp"
+                    android:id="@+id/g3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent">
 
-                    <FrameLayout
-                        android:id="@+id/a21"
-                        android:layout_width="49dp"
-                        android:layout_height="24dp"
+                    <!-- g1 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:background="@color/bluish_cyan"/>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
 
-                    <FrameLayout
-                        android:id="@+id/a22"
-                        android:layout_width="49dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a21"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/exit"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:contentDescription="@string/exit" />
 
-                    <FrameLayout
-                        android:id="@+id/a23"
-                        android:layout_width="49dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a22"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <FrameLayout
-                        android:id="@+id/a24"
-                        android:layout_width="49dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a23"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
+                    <!-- g2 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/mr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/exit"
 
-                    <FrameLayout
-                        android:id="@+id/a25"
-                        android:layout_width="49dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a24"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
+                        app:layout_constraintBottom_toTopOf="@id/entrance"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginBottom="50dp">
 
-                    <FrameLayout
-                        android:id="@+id/a26"
-                        android:layout_width="49dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a25"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
+                        <!-- 30-36 -->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/bmap3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/map3"
+                            android:layout_marginEnd="9dp">
 
-                    <FrameLayout
-                        android:id="@+id/a27"
-                        android:layout_width="49dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a26"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
+                            <FrameLayout
+                                android:id="@+id/a30"
+                                android:layout_width="50dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:background="@color/bluish_cyan"/>
 
-                    <FrameLayout
-                        android:id="@+id/a28"
-                        android:layout_width="49dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a27"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
+                            <FrameLayout
+                                android:id="@+id/a31"
+                                android:layout_width="50dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a30"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
 
-                    <FrameLayout
-                        android:id="@+id/a29"
-                        android:layout_width="49dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a28"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
+                            <FrameLayout
+                                android:id="@+id/a32"
+                                android:layout_width="50dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a31"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a33"
+                                android:layout_width="50dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a32"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a34"
+                                android:layout_width="50dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a33"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a35"
+                                android:layout_width="50dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a34"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                            <FrameLayout
+                                android:id="@+id/a36"
+                                android:layout_width="50dp"
+                                android:layout_height="24dp"
+                                app:layout_constraintTop_toBottomOf="@id/a35"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginTop="6dp"
+                                android:background="@color/bluish_cyan"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <!-- map 3 -->
+                        <ImageView
+                            android:id="@+id/map3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:background="@drawable/line_30_36"
+                            android:backgroundTint="@color/white"
+                            android:contentDescription="@string/map3" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <!-- g3 -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/entrance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:background="@drawable/entrance"
+                            android:contentDescription="@string/entrance" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- 37-40 -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/bot"
-                android:layout_width="111dp"
-                android:layout_height="83dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-                <FrameLayout
-                    android:id="@+id/a37"
-                    android:layout_width="24dp"
-                    android:layout_height="49dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/a38"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:background="@color/bluish_cyan"/>
-
-                <FrameLayout
-                    android:id="@+id/a38"
-                    android:layout_width="24dp"
-                    android:layout_height="49dp"
-                    app:layout_constraintStart_toEndOf="@id/a37"
-                    app:layout_constraintEnd_toStartOf="@id/a39"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:background="@color/bluish_cyan"
-                    android:layout_marginStart="5dp"/>
-
-                <FrameLayout
-                    android:id="@+id/a39"
-                    android:layout_width="24dp"
-                    android:layout_height="49dp"
-                    app:layout_constraintStart_toEndOf="@id/a38"
-                    app:layout_constraintEnd_toStartOf="@id/a40"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:background="@color/bluish_cyan"
-                    android:layout_marginStart="5dp"/>
-
-                <FrameLayout
-                    android:id="@+id/a40"
-                    android:layout_width="24dp"
-                    android:layout_height="49dp"
-                    app:layout_constraintStart_toEndOf="@id/a39"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:background="@color/bluish_cyan"
-                    android:layout_marginStart="5dp"/>
-
-                <ImageView
-                    android:id="@+id/map4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:background="@drawable/line_37_40"
-                    android:backgroundTint="@color/white"
-                    android:contentDescription="@string/map4" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!-- group 3 -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/g3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <!-- g1 -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/exit"
-                android:layout_width="wrap_content"
+            <!-- Button -->
+            <Button
+                android:id="@+id/button"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/parkmap"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/exit"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:contentDescription="@string/exit" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <!-- g2 -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/mr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/exit"
-
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/entrance"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="50dp">
-
-                <!-- 30-36 -->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/bmap3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/map3"
-                    android:layout_marginEnd="9dp">
-
-                    <FrameLayout
-                        android:id="@+id/a30"
-                        android:layout_width="50dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:background="@color/bluish_cyan"/>
-
-                    <FrameLayout
-                        android:id="@+id/a31"
-                        android:layout_width="50dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a30"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
-
-                    <FrameLayout
-                        android:id="@+id/a32"
-                        android:layout_width="50dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a31"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
-
-                    <FrameLayout
-                        android:id="@+id/a33"
-                        android:layout_width="50dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a32"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
-
-                    <FrameLayout
-                        android:id="@+id/a34"
-                        android:layout_width="50dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a33"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
-
-                    <FrameLayout
-                        android:id="@+id/a35"
-                        android:layout_width="50dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a34"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
-
-                    <FrameLayout
-                        android:id="@+id/a36"
-                        android:layout_width="50dp"
-                        android:layout_height="24dp"
-                        app:layout_constraintTop_toBottomOf="@id/a35"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:layout_marginTop="6dp"
-                        android:background="@color/bluish_cyan"/>
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <!-- map 3 -->
-                <ImageView
-                    android:id="@+id/map3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:background="@drawable/line_30_36"
-                    android:backgroundTint="@color/white"
-                    android:contentDescription="@string/map3" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <!-- g3 -->
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/entrance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:background="@drawable/entrance"
-                    android:contentDescription="@string/entrance" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
+                android:backgroundTint="?attr/mainbutton"
+                android:fontFamily="@font/product_sans_bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:text="@string/choose_area"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!-- Button -->
-    <Button
-        android:id="@+id/button"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/parkmap"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="?attr/mainbutton"
-        android:fontFamily="@font/product_sans_bold"
-        android:textSize="14sp"
-        android:textColor="@color/black"
-        android:textAllCaps="false"
-        android:visibility="gone"
-        android:text="@string/choose_area"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

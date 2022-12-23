@@ -68,6 +68,10 @@ class FirstFloor : Fragment() {
 //        dialogBinding.close.setOnClickListener { dialog?.dismiss() }
 
         setUpFloor(userPreverence.getToken()!!)
+        binding.swipeToRefresh.setOnRefreshListener {
+            setUpFloor(userPreverence.getToken()!!)
+            binding.swipeToRefresh.isRefreshing = false
+        }
 
     }
 

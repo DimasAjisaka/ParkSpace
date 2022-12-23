@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity() {
             binding.swipeToRefresh.isRefreshing = false
         }
 
+        "Cibiru, Bandung".let { binding.locatext.text = it }
+
 
 
         //gps
@@ -89,8 +91,10 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener { startActivity(Intent(this, BookingActivity::class.java)) }
     }
 
+    //get first name
     private fun getFirstName(name: String?): String? = name?.substring(0,name.lastIndexOf(' '))
 
+    //setup name and get all data
     private fun setUpName(token: String){
         userViewModel.getName(token).observe(this){
             if (it != null){
@@ -99,11 +103,14 @@ class MainActivity : AppCompatActivity() {
                     is Resource.Success -> {
                         val response = it.data
                         binding.name.text = getFirstName(it.data.name)
+                        if (response.timeStart == null) binding.startcount.text = "..." else binding.startcount.text = response.timeStart
+                        if (response.duration == 0) binding.mincount.text = "..." else binding.mincount.text = response.duration.toString()
+                        if (response.distance == 0) binding.kmcount.text = "..." else binding.kmcount.text = response.distance.toString()
                         if (response.floor == null) binding.codepark.text = "..." else binding.codepark.text = response.floor
-                        if (response.slot == null) binding.nopark.text = "..." else binding.nopark.text = response.slot.toString()
+                        if (response.slot == 0) binding.nopark.text = "..." else binding.nopark.text = response.slot.toString()
                         binding.nominal.text = response.total.toString()
-                        binding.timeslot.text = response.timeString
-                        binding.bookid.text = response.parkcode
+                        if (response.timeString == null) binding.timeslot.text = "..." else binding.timeslot.text = response.timeString
+                        if (response.parkcode == null) "Book ID".let { binding.bookid.text = it } else binding.bookid.text = response.parkcode
                     }
                     is Resource.Error -> {
                         if (it.message == "Unauthorized"){
@@ -119,9 +126,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //setup refresh token
     private fun setUpRefreshToken(refreshToken: String){
         lifecycleScope.launch {
-            delay(59000)
+            delay(43200000)
             authViewModel.refreshToken(RefreshTokenModel(refreshToken)).observe(this@MainActivity){
                 if (it != null){
                     when(it){

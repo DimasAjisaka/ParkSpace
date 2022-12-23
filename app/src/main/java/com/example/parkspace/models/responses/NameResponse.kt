@@ -14,7 +14,7 @@ data class NameResponse(
 	val floor: String? = null,
 
 	@field:SerializedName("slot")
-	val slot: Int? = null,
+	val slot: Int? = 0,
 
 	@field:SerializedName("timeString")
 	val timeString: String? = null,
@@ -23,5 +23,14 @@ data class NameResponse(
 	val total: Int? = 0,
 
 	@field:SerializedName("parking_code")
-	val parkcode: String? = "Book ID"
+	val parkcode: String? = null,
+
+	@field:SerializedName("timeStart")
+	val timeStart: String? = null,
+
+	@field:SerializedName("duration")
+	val duration: Int? = 0,
+
+	@field:SerializedName("distance")
+	val distance: Int? = 0
 )
