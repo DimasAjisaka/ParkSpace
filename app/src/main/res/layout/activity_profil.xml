@@ -7,320 +7,334 @@
     tools:context=".view.activity.ProfilActivity"
     android:background="?attr/bg">
 
-<!--App Bar-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/top"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp">
+        android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/backarrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="@drawable/ic_baseline_arrow_back_ios_new_24"
-            android:backgroundTint="?attr/boldText"
-            android:contentDescription="@string/backarrow" />
-
-        <TextView
-            android:id="@+id/detail"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/all"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/backarrow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:text="@string/profile"
-            android:fontFamily="@font/product_sans_bold"
-            android:textSize="22sp"
-            android:textAlignment="center"
-            android:textColor="?attr/boldText"/>
+            android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:background="@drawable/ic_baseline_logout_24"
-            android:backgroundTint="?attr/boldText"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/top"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp">
-
-        <!--picture-->
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="170dp"
-            android:layout_height="170dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:src="@drawable/avatar"
-            android:contentDescription="@string/image" />
-
-        <ImageView
-            android:id="@+id/edit"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/edit"
-            android:contentDescription="@string/edit_profile" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/profile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="34dp"
-        android:fontFamily="@font/product_sans_bold"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textColor="?attr/boldText"
-        android:text="@string/name"/>
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/product_sans_bold"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textColor="?attr/boldText"
-        android:text="@string/email_address"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp">
-<!--booking-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/g1"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <ImageView
-                android:id="@+id/appoint"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:background="@drawable/appointment"
-                android:backgroundTint="?attr/boldText"
-                android:contentDescription="@string/appoint"/>
-            
-            <TextView
-                android:id="@+id/bookcount"
+            <!--App Bar-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/appoint"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="26dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="24sp"
-                android:textAlignment="center"
-                android:textColor="?attr/boldText"
-                android:text="@string/blank"/>
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp">
 
-            <TextView
-                android:id="@+id/booktext"
+                <ImageButton
+                    android:id="@+id/backarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/ic_baseline_arrow_back_ios_new_24"
+                    android:backgroundTint="?attr/boldText"
+                    android:contentDescription="@string/backarrow" />
+
+                <TextView
+                    android:id="@+id/detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/backarrow"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/profile"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textSize="22sp"
+                    android:textAlignment="center"
+                    android:textColor="?attr/boldText"/>
+
+                <ImageButton
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/ic_baseline_logout_24"
+                    android:backgroundTint="?attr/boldText"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/bookcount"
+                app:layout_constraintTop_toBottomOf="@id/top"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="20sp"
+                android:layout_marginTop="40dp">
+
+                <!--picture-->
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/avatar"
+                    android:contentDescription="@string/image" />
+
+                <ImageView
+                    android:id="@+id/edit"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/edit"
+                    android:contentDescription="@string/edit_profile" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/profile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="34dp"
+                android:fontFamily="@font/product_sans_bold"
                 android:textAlignment="center"
-                android:textColor="?attr/mediumText"
-                android:text="@string/bookings"/>
+                android:textSize="24sp"
+                android:textColor="?attr/boldText"
+                android:text="@string/name"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/product_sans_bold"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="?attr/boldText"
+                android:text="@string/email_address"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
+                <!--booking-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/g1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <ImageView
+                        android:id="@+id/appoint"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/appointment"
+                        android:backgroundTint="?attr/boldText"
+                        android:contentDescription="@string/appoint"/>
+
+                    <TextView
+                        android:id="@+id/bookcount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/appoint"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="26dp"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/blank"/>
+
+                    <TextView
+                        android:id="@+id/booktext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/bookcount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/mediumText"
+                        android:text="@string/bookings"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--hours-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/g2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/g1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/g3">
+
+                    <ImageView
+                        android:id="@+id/clock"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/clock"
+                        android:backgroundTint="?attr/boldText"
+                        android:contentDescription="@string/clock"/>
+
+                    <TextView
+                        android:id="@+id/hourscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/clock"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="26dp"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/blank"/>
+
+                    <TextView
+                        android:id="@+id/hourstext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/hourscount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/mediumText"
+                        android:text="@string/hours"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--Saldo-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/g3"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp">
+
+                    <ImageView
+                        android:id="@+id/bag"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/money_bag"
+                        android:backgroundTint="?attr/boldText"
+                        android:contentDescription="@string/money_bag"/>
+
+                    <TextView
+                        android:id="@+id/saldocount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/bag"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="26dp"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/blank"/>
+
+                    <TextView
+                        android:id="@+id/saldotext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/saldocount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textSize="20sp"
+                        android:textAlignment="center"
+                        android:textColor="?attr/mediumText"
+                        android:text="@string/rp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/group"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/parkspace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:fontFamily="@font/product_sans_bold"
+                    android:textColor="?attr/boldText"
+                    android:textSize="24sp"
+                    android:textAlignment="center"
+                    android:text="@string/parkspace"/>
+
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/parkspace"
+                    app:layout_constraintStart_toStartOf="@id/parkspace"
+                    app:layout_constraintEnd_toEndOf="@id/parkspace"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:fontFamily="@font/product_sans_medium"
+                    android:textColor="?attr/mediumText"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:text="@string/about_us"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--hours-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/g2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/g1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/g3">
-
-            <ImageView
-                android:id="@+id/clock"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:background="@drawable/clock"
-                android:backgroundTint="?attr/boldText"
-                android:contentDescription="@string/clock"/>
-
-            <TextView
-                android:id="@+id/hourscount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/clock"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="26dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="24sp"
-                android:textAlignment="center"
-                android:textColor="?attr/boldText"
-                android:text="@string/blank"/>
-
-            <TextView
-                android:id="@+id/hourstext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/hourscount"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:textColor="?attr/mediumText"
-                android:text="@string/hours"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--Saldo-->
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/g3"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="20dp">
-
-            <ImageView
-                android:id="@+id/bag"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:background="@drawable/money_bag"
-                android:backgroundTint="?attr/boldText"
-                android:contentDescription="@string/money_bag"/>
-
-            <TextView
-                android:id="@+id/saldocount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/bag"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="26dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="24sp"
-                android:textAlignment="center"
-                android:textColor="?attr/boldText"
-                android:text="@string/blank"/>
-
-            <TextView
-                android:id="@+id/saldotext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/saldocount"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:textColor="?attr/mediumText"
-                android:text="@string/rp"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/footer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/group"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <TextView
-            android:id="@+id/parkspace"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:fontFamily="@font/product_sans_bold"
-            android:textColor="?attr/boldText"
-            android:textSize="24sp"
-            android:textAlignment="center"
-            android:text="@string/parkspace"/>
-
-        <TextView
-            android:id="@+id/about"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/parkspace"
-            app:layout_constraintStart_toStartOf="@id/parkspace"
-            app:layout_constraintEnd_toEndOf="@id/parkspace"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:fontFamily="@font/product_sans_medium"
-            android:textColor="?attr/mediumText"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:text="@string/about_us"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

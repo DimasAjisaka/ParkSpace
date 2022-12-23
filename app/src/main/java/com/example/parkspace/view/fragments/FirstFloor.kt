@@ -1,22 +1,14 @@
 package com.example.parkspace.view.fragments
 
 import android.annotation.SuppressLint
-import android.graphics.Bitmap
-import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.FrameLayout
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
 import com.example.parkspace.R
 import com.example.parkspace.databinding.FragmentFirstFloorBinding
 import com.example.parkspace.databinding.TicketBottomSheetBinding
@@ -27,9 +19,6 @@ import com.example.parkspace.utils.Resource
 import com.example.parkspace.utils.UserPreverence
 import com.example.parkspace.viewmodels.FloorViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import retrofit2.Response
 
 class FirstFloor : Fragment() {
 

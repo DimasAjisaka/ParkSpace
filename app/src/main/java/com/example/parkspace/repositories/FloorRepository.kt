@@ -1,7 +1,6 @@
 package com.example.parkspace.repositories
 
 import com.example.parkspace.models.data.TicketModel
-import com.example.parkspace.models.responses.TicketItem
 import com.example.parkspace.utils.APIConfig
 
 class FloorRepository {

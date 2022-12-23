@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.parkspace.R
-import com.example.parkspace.databinding.FragmentSignInBinding
 import com.example.parkspace.databinding.FragmentThirdBinding
 import com.example.parkspace.databinding.TicketBottomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog

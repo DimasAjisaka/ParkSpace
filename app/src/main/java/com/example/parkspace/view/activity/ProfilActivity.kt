@@ -33,6 +33,11 @@ class ProfilActivity : AppCompatActivity() {
 
         setUpProfile(userPreverence.getToken()!!)
 
+        binding.swipeToRefresh.setOnRefreshListener {
+            setUpProfile(userPreverence.getToken()!!)
+            binding.swipeToRefresh.isRefreshing = false
+        }
+
         binding.backarrow.setOnClickListener { finish() }
         binding.logout.setOnClickListener {
             userPreverence.setLogin(false)

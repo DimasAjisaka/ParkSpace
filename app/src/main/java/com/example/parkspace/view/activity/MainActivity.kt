@@ -7,7 +7,6 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.graphics.Color
-import android.location.Address
 import android.location.Geocoder
 import android.location.Location
 import android.location.LocationManager
@@ -18,22 +17,16 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.lifecycleScope
-import com.example.parkspace.R
 import com.example.parkspace.databinding.ActivityMainBinding
 import com.example.parkspace.models.data.RefreshTokenModel
-import com.example.parkspace.models.data.TicketModel
 import com.example.parkspace.utils.Resource
 import com.example.parkspace.utils.UserPreverence
 import com.example.parkspace.viewmodels.AuthViewModel
 import com.example.parkspace.viewmodels.UserViewModel
-import com.example.parkspace.view.activity.OnBoardingActivity
 import com.google.android.gms.location.*
-import com.google.android.gms.tasks.Task
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.*
@@ -59,8 +52,15 @@ class MainActivity : AppCompatActivity() {
 
         userPreverence = UserPreverence(this)
         userPreverence?.getToken()?.let { setUpName(it) }
-
         setUpRefreshToken(userPreverence?.getRefreshToken()!!)
+
+        binding.swipeToRefresh.setOnRefreshListener {
+            userPreverence?.getToken()?.let { setUpName(it) }
+            setUpRefreshToken(userPreverence?.getRefreshToken()!!)
+            binding.swipeToRefresh.isRefreshing = false
+        }
+
+
 
         //gps
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
@@ -99,13 +99,20 @@ class MainActivity : AppCompatActivity() {
                     is Resource.Success -> {
                         val response = it.data
                         binding.name.text = getFirstName(it.data.name)
-                        binding.codepark.text = response.floor
-                        binding.nopark.text = response.slot.toString()
+                        if (response.floor == null) binding.codepark.text = "..." else binding.codepark.text = response.floor
+                        if (response.slot == null) binding.nopark.text = "..." else binding.nopark.text = response.slot.toString()
                         binding.nominal.text = response.total.toString()
                         binding.timeslot.text = response.timeString
+                        binding.bookid.text = response.parkcode
                     }
                     is Resource.Error -> {
-                        Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                        if (it.message == "Unauthorized"){
+                            Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                            userPreverence?.setLogin(false)
+                            userPreverence?.setToken("")
+                            startActivity(Intent(this@MainActivity, SignActivity::class.java))
+                            finish()
+                        } else Toast.makeText(this,it.message,Toast.LENGTH_LONG).show()
                     }
                 }
             }
@@ -124,11 +131,13 @@ class MainActivity : AppCompatActivity() {
                             it.data.refreshToken?.let { refreshToken-> userPreverence?.setRefreshToken(refreshToken) }
                         }
                         is Resource.Error -> {
-                            Toast.makeText(this@MainActivity, it.message, Toast.LENGTH_LONG).show()
-                            userPreverence?.setLogin(false)
-                            userPreverence?.setToken("")
-                            startActivity(Intent(this@MainActivity, SignActivity::class.java))
-                            finish()
+                            if (it.message == "Unauthorized"){
+                                Toast.makeText(this@MainActivity, it.message, Toast.LENGTH_LONG).show()
+                                userPreverence?.setLogin(false)
+                                userPreverence?.setToken("")
+                                startActivity(Intent(this@MainActivity, SignActivity::class.java))
+                                finish()
+                            } else Toast.makeText(this@MainActivity,it.message,Toast.LENGTH_LONG).show()
                         }
                     }
                 }
@@ -230,9 +239,6 @@ class MainActivity : AppCompatActivity() {
 //        }
 //    }
 
-    override fun isActivityTransitionRunning(): Boolean {
-        return super.isActivityTransitionRunning()
-    }
 
     override fun onDestroy() {
         super.onDestroy()

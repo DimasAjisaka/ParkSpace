@@ -8,523 +8,624 @@
     tools:context=".view.activity.MainActivity">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="?attr/mainfoot"/>
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <!--header-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/head"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp">
-        <!--location-->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/location"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/hellotext"
-            android:layout_marginStart="30dp">
-
-            <ImageView
-                android:id="@+id/localogo"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@drawable/ic_baseline_location_on_24"
-                android:backgroundTint="@color/cherry_paddle_pop"
-                android:contentDescription="@string/locationlogo" />
-            <TextView
-                android:id="@+id/locatext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/localogo"
-                android:layout_marginStart="8dp"
-                android:fontFamily="@font/product_sans_regular"
-                android:textSize="16sp"
-                android:textColor="?attr/regularText"
-                android:text="@string/location"/>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <!--hello-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/hellotext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/location"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="30dp">
-
-            <TextView
-                android:id="@+id/hello"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/name"
-                android:fontFamily="@font/product_sans_bold"
-                android:textSize="24sp"
-                android:textColor="?attr/maintextbold"
-                android:text="@string/hello"/>
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/hello"
-                app:layout_constraintEnd_toStartOf="@id/seru"
-                android:layout_marginStart="4dp"
-                android:fontFamily="@font/product_sans_bold"
-                android:textSize="24sp"
-                android:textColor="?attr/maintextbold"
-                android:text="@string/name"/>
-            <TextView
-                android:id="@+id/seru"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/name"
-                android:fontFamily="@font/product_sans_bold"
-                android:textSize="24sp"
-                android:textColor="?attr/maintextbold"
-                android:text="@string/seru"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <!--profil-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/profiles"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="30dp">
-
-            <ImageView
-                android:id="@+id/profileicon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:background="@drawable/profil"
-                android:backgroundTint="?attr/maintextbold"
-                android:contentDescription="@string/profilelogo" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--Menu-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/head"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp">
-        <!--card 1-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/start"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <ImageView
-                android:id="@+id/card1"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:contentDescription="@string/card1"
-                android:src="@drawable/cardmain"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <ImageView
-                android:id="@+id/startic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="14dp"
-                android:background="@drawable/start"
-                android:backgroundTint="?attr/boldText"
-                android:contentDescription="@string/start"/>
-
-            <TextView
-                android:id="@+id/startcount"
-                android:layout_width="84dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/startic"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/product_sans_bold"
-                android:textAlignment="center"
-                android:textSize="30sp"
-                android:textColor="@color/hawaiian_passion"
-                android:text="@string/blank"/>
-
-            <TextView
-                android:id="@+id/starttext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/startcount"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="?attr/maintextmedium"
-                android:text="@string/start"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--card 2-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/min"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/start"
-            app:layout_constraintEnd_toStartOf="@id/km">
-
-            <ImageView
-                android:id="@+id/card2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:src="@drawable/cardmain"
-                android:contentDescription="@string/card1" />
-
-            <ImageView
-                android:id="@+id/minic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="14dp"
-                android:background="@drawable/min"
-                android:backgroundTint="?attr/boldText"
-                android:contentDescription="@string/min"/>
-
-            <TextView
-                android:id="@+id/mincount"
-                android:layout_width="84dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/minic"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/product_sans_bold"
-                android:textAlignment="center"
-                android:textSize="30sp"
-                android:textColor="@color/hawaiian_passion"
-                android:text="@string/blank"/>
-
-            <TextView
-                android:id="@+id/mintext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/mincount"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="?attr/maintextmedium"
-                android:text="@string/min"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--card 3-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/km"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <ImageView
-                android:id="@+id/card3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:src="@drawable/cardmain"
-                android:contentDescription="@string/card1" />
-
-            <ImageView
-                android:id="@+id/kmic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginTop="14dp"
-                android:background="@drawable/km"
-                android:backgroundTint="?attr/boldText"
-                android:contentDescription="@string/km"/>
-
-            <TextView
-                android:id="@+id/kmcount"
-                android:layout_width="84dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/kmic"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/product_sans_bold"
-                android:textAlignment="center"
-                android:textSize="30sp"
-                android:textColor="@color/hawaiian_passion"
-                android:text="@string/blank"/>
-
-            <TextView
-                android:id="@+id/kmtext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/kmcount"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="14dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="?attr/maintextmedium"
-                android:text="@string/km"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!--card ticket-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cardticket"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card_ticket"
-        app:layout_constraintTop_toBottomOf="@id/menu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp">
-
-<!--        <ImageView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            android:background="@drawable/cardticket"-->
-<!--            android:backgroundTint="?attr/cardticket"-->
-<!--            android:contentDescription="@string/cardticket"/>-->
-<!--identitas no parking-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/noparking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="26dp"
-            android:layout_marginStart="30dp">
-<!--code lantai-->
-            <TextView
-                android:id="@+id/codepark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/parkstrip"
-                android:fontFamily="@font/product_sans_bold"
-                android:textSize="24sp"
-                android:textColor="?attr/boldText"
-                android:text="@string/blank"/>
-<!--strip-->
-            <TextView
-                android:id="@+id/parkstrip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/codepark"
-                app:layout_constraintEnd_toStartOf="@id/nopark"
-                android:fontFamily="@font/product_sans_bold"
-                android:textSize="24sp"
-                android:textColor="?attr/boldText"
-                android:text="@string/strips"/>
-<!--no parking-->
-            <TextView
-                android:id="@+id/nopark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/parkstrip"
-                android:fontFamily="@font/product_sans_bold"
-                android:textSize="24sp"
-                android:textColor="?attr/boldText"
-                android:text="@string/blank"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--Line 1-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/line1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/noparking"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp">
-
-            <!--Line 1-->
-            <ImageView
-                android:id="@+id/line"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:background="@drawable/line_18"
-                android:contentDescription="@string/line1" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-<!--time & price-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/group2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/line1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp">
+            android:id="@+id/all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/time"
-                android:layout_width="180dp"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="?attr/mainfoot"/>
+
+            <!--header-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/head"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp">
+                <!--location-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/hellotext"
+                    android:layout_marginStart="30dp">
 
-                <TextView
-                    android:id="@+id/timetext"
+                    <ImageView
+                        android:id="@+id/localogo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@drawable/ic_baseline_location_on_24"
+                        android:backgroundTint="@color/cherry_paddle_pop"
+                        android:contentDescription="@string/locationlogo" />
+                    <TextView
+                        android:id="@+id/locatext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/localogo"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/product_sans_regular"
+                        android:textSize="16sp"
+                        android:textColor="?attr/regularText"
+                        android:text="@string/location"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--hello-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/hellotext"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:fontFamily="@font/product_sans_medium"
-                    android:textSize="14sp"
-                    android:textColor="?attr/mediumText"
-                    android:text="@string/time_slot"/>
-
-                <TextView
-                    android:id="@+id/timeslot"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/timetext"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/location"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:fontFamily="@font/product_sans_medium"
-                    android:textSize="18sp"
-                    android:textColor="?attr/mediumText"
-                    android:text="@string/blank"/>
+                    android:layout_marginStart="30dp">
+
+                    <TextView
+                        android:id="@+id/hello"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/name"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="24sp"
+                        android:textColor="?attr/maintextbold"
+                        android:text="@string/hello"/>
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/hello"
+                        app:layout_constraintEnd_toStartOf="@id/seru"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="24sp"
+                        android:textColor="?attr/maintextbold"
+                        android:text="@string/name"/>
+                    <TextView
+                        android:id="@+id/seru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/name"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="24sp"
+                        android:textColor="?attr/maintextbold"
+                        android:text="@string/seru"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--profil-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/profiles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="30dp">
+
+                    <ImageView
+                        android:id="@+id/profileicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:background="@drawable/profil"
+                        android:backgroundTint="?attr/maintextbold"
+                        android:contentDescription="@string/profilelogo" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <!--Menu-->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/price"
-                android:layout_width="120dp"
+                android:id="@+id/menu"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/time"
+                app:layout_constraintTop_toBottomOf="@id/head"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/pricetext"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:fontFamily="@font/product_sans_medium"
-                    android:textSize="14sp"
-                    android:textColor="?attr/mediumText"
-                    android:text="@string/price"/>
-
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp">
+                <!--card 1-->
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/pricedetail"
-                    android:layout_width="match_parent"
+                    android:id="@+id/start"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/pricetext"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
 
-                    <TextView
-                        android:id="@+id/rupiah"
+                    <ImageView
+                        android:id="@+id/card1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/card1"
+                        android:src="@drawable/cardmain"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <ImageView
+                        android:id="@+id/startic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:fontFamily="@font/product_sans_medium"
-                        android:textSize="18sp"
-                        android:textColor="?attr/mediumText"
-                        android:text="@string/rp"/>
-<!--nominal-->
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/start"
+                        android:backgroundTint="?attr/boldText"
+                        android:contentDescription="@string/start"/>
+
                     <TextView
-                        android:id="@+id/nominal"
-                        android:layout_width="0dp"
+                        android:id="@+id/startcount"
+                        android:layout_width="84dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/startic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:textColor="@color/hawaiian_passion"
+                        android:text="@string/blank"/>
+
+                    <TextView
+                        android:id="@+id/starttext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/startcount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textColor="?attr/maintextmedium"
+                        android:text="@string/start"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--card 2-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/min"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/start"
+                    app:layout_constraintEnd_toStartOf="@id/km">
+
+                    <ImageView
+                        android:id="@+id/card2"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/rupiah"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginStart="4dp"
+                        android:src="@drawable/cardmain"
+                        android:contentDescription="@string/card1" />
+
+                    <ImageView
+                        android:id="@+id/minic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/min"
+                        android:backgroundTint="?attr/boldText"
+                        android:contentDescription="@string/min"/>
+
+                    <TextView
+                        android:id="@+id/mincount"
+                        android:layout_width="84dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/minic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:textColor="@color/hawaiian_passion"
+                        android:text="@string/blank"/>
+
+                    <TextView
+                        android:id="@+id/mintext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/mincount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textColor="?attr/maintextmedium"
+                        android:text="@string/min"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--card 3-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/km"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/card3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/cardmain"
+                        android:contentDescription="@string/card1" />
+
+                    <ImageView
+                        android:id="@+id/kmic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/km"
+                        android:backgroundTint="?attr/boldText"
+                        android:contentDescription="@string/km"/>
+
+                    <TextView
+                        android:id="@+id/kmcount"
+                        android:layout_width="84dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/kmic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textAlignment="center"
+                        android:textSize="30sp"
+                        android:textColor="@color/hawaiian_passion"
+                        android:text="@string/blank"/>
+
+                    <TextView
+                        android:id="@+id/kmtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/kmcount"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textColor="?attr/maintextmedium"
+                        android:text="@string/km"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--card ticket-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardticket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_ticket"
+                app:layout_constraintTop_toBottomOf="@id/menu"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp">
+
+                <!--        <ImageView-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            app:layout_constraintStart_toStartOf="parent"-->
+                <!--            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--            app:layout_constraintTop_toTopOf="parent"-->
+                <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--            android:background="@drawable/cardticket"-->
+                <!--            android:backgroundTint="?attr/cardticket"-->
+                <!--            android:contentDescription="@string/cardticket"/>-->
+                <!--identitas no parking-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/noparking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginStart="30dp">
+                    <!--code lantai-->
+                    <TextView
+                        android:id="@+id/codepark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/parkstrip"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="24sp"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/blank"/>
+                    <!--strip-->
+                    <TextView
+                        android:id="@+id/parkstrip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/codepark"
+                        app:layout_constraintEnd_toStartOf="@id/nopark"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="24sp"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/strips"/>
+                    <!--no parking-->
+                    <TextView
+                        android:id="@+id/nopark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/parkstrip"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="24sp"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/blank"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/noparkscope"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="30dp">
+
+                    <TextView
+                        android:id="@+id/bookid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:textSize="24sp"
+                        android:textColor="?attr/boldText"
+                        android:text="@string/book_id"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--Line 1-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/line1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/noparking"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp">
+
+                    <!--Line 1-->
+                    <ImageView
+                        android:id="@+id/line"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/line_18"
+                        android:contentDescription="@string/line1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--time & price-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/group2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/line1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/time"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:id="@+id/timetext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:textSize="14sp"
+                            android:textColor="?attr/mediumText"
+                            android:text="@string/time_slot"/>
+
+                        <TextView
+                            android:id="@+id/timeslot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/timetext"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:textSize="18sp"
+                            android:textColor="?attr/mediumText"
+                            android:text="@string/blank"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/price"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toEndOf="@id/time"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/pricetext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:textSize="14sp"
+                            android:textColor="?attr/mediumText"
+                            android:text="@string/price"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/pricedetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/pricetext"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+
+                            <TextView
+                                android:id="@+id/rupiah"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:fontFamily="@font/product_sans_medium"
+                                android:textSize="18sp"
+                                android:textColor="?attr/mediumText"
+                                android:text="@string/rp"/>
+                            <!--nominal-->
+                            <TextView
+                                android:id="@+id/nominal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/rupiah"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginStart="4dp"
+                                android:fontFamily="@font/product_sans_medium"
+                                android:textSize="18sp"
+                                android:textColor="?attr/mediumText"
+                                android:text="@string/blank"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--Line 2-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/line2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/group2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp">
+
+                    <!--Line 1-->
+                    <ImageView
+                        android:id="@+id/linetwo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/line_18"
+                        android:contentDescription="@string/line1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--location-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/loca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/line2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="30dp">
+
+                    <TextView
+                        android:id="@+id/locattext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:fontFamily="@font/product_sans_medium"
+                        android:textSize="14sp"
+                        android:textColor="?attr/mediumText"
+                        android:text="@string/loca"/>
+
+                    <TextView
+                        android:id="@+id/locadesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/locattext"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="25dp"
                         android:fontFamily="@font/product_sans_medium"
                         android:textSize="18sp"
                         android:textColor="?attr/mediumText"
@@ -534,84 +635,26 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <!--Line 2-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/line2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/group2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp">
-
-            <!--Line 1-->
-            <ImageView
-                android:id="@+id/linetwo"
-                android:layout_width="0dp"
+            <!--Button-->
+            <Button
+                android:id="@+id/button"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardticket"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:background="@drawable/line_18"
-                android:contentDescription="@string/line1" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-<!--location-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/loca"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/line2"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="30dp">
-
-            <TextView
-                android:id="@+id/locattext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="14sp"
-                android:textColor="?attr/mediumText"
-                android:text="@string/loca"/>
-
-            <TextView
-                android:id="@+id/locadesc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/locattext"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="25dp"
-                android:fontFamily="@font/product_sans_medium"
-                android:textSize="18sp"
-                android:textColor="?attr/mediumText"
-                android:text="@string/blank"/>
+                android:backgroundTint="?attr/mainbutton"
+                android:fontFamily="@font/product_sans_bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:text="@string/choose_parking_area"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-<!--Button-->
-    <Button
-        android:id="@+id/button"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/cardticket"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="?attr/mainbutton"
-        android:fontFamily="@font/product_sans_bold"
-        android:textSize="14sp"
-        android:textColor="@color/black"
-        android:textAllCaps="false"
-        android:text="@string/choose_parking_area"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

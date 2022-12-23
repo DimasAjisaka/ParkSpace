@@ -12,7 +12,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.core.widget.addTextChangedListener
 import com.example.parkspace.R
 import com.example.parkspace.databinding.FragmentVerifyEmailBinding

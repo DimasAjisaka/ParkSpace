@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.parkspace.models.data.TicketModel
 import com.example.parkspace.models.responses.FloorItem
-import com.example.parkspace.models.responses.FloorResponse
 import com.example.parkspace.models.responses.TicketItem
 import com.example.parkspace.repositories.FloorRepository
 import com.example.parkspace.utils.Resource

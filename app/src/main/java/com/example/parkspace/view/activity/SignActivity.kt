@@ -1,27 +1,16 @@
 package com.example.parkspace.view.activity
 
-import android.annotation.SuppressLint
-import android.content.Intent
-import android.content.pm.PackageManager
 import android.content.res.Configuration
-import android.graphics.BitmapFactory
 import android.graphics.Color
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
-import androidx.core.content.FileProvider
 import com.example.parkspace.adapters.SignHeaderAdapter
 import com.example.parkspace.adapters.SignTabPagerAdapter
 import com.example.parkspace.databinding.ActivitySignBinding
 import com.google.android.material.tabs.TabLayout
-import java.io.File
 
 
 class SignActivity : AppCompatActivity() {

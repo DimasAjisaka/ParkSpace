@@ -18,7 +18,7 @@ android {
 
         //API
 //        buildConfigField("String", "HOST",'')
-        buildConfigField("String", "URL",'"http://192.168.158.206:8000/"')
+        buildConfigField("String", "URL",'"http://192.168.100.14:8000/"')
 //        buildConfigField("String", "KEY", '')
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -81,5 +81,8 @@ dependencies {
     //gps
     implementation 'com.google.android.gms:play-services-location:21.0.1'
     //QR code
+
+    //refresh
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
 }

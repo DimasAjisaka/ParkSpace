@@ -10,7 +10,6 @@ import com.bumptech.glide.Glide
 import com.example.parkspace.R
 import com.example.parkspace.databinding.ActivityEditProfileBinding
 import com.example.parkspace.models.responses.ProfileResponse
-import com.example.parkspace.viewmodels.UserViewModel
 
 class EditProfile : AppCompatActivity() {
     private var _binding: ActivityEditProfileBinding? = null
@@ -29,6 +28,7 @@ class EditProfile : AppCompatActivity() {
         data?.phoneNumber?.let { binding.inputphonum.setText(it) }
 
         binding.backarrow.setOnClickListener { finish() }
+        binding.save.setOnClickListener { finish() }
     }
 
     companion object{
