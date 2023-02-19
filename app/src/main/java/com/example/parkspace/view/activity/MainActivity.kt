@@ -21,7 +21,7 @@ import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.parkspace.databinding.ActivityMainBinding
-import com.example.parkspace.models.data.RefreshTokenModel
+import com.example.parkspace.models.responses.data.RefreshTokenModel
 import com.example.parkspace.utils.Resource
 import com.example.parkspace.utils.UserPreverence
 import com.example.parkspace.viewmodels.AuthViewModel

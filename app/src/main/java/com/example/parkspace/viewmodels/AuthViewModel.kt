@@ -3,10 +3,10 @@ package com.example.parkspace.viewmodels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.example.parkspace.models.data.LoginModel
-import com.example.parkspace.models.data.LogoutModel
-import com.example.parkspace.models.data.RefreshTokenModel
-import com.example.parkspace.models.data.RegisterModel
+import com.example.parkspace.models.responses.data.LoginModel
+import com.example.parkspace.models.responses.data.LogoutModel
+import com.example.parkspace.models.responses.data.RefreshTokenModel
+import com.example.parkspace.models.responses.data.RegisterModel
 import com.example.parkspace.models.responses.LoginResponse
 import com.example.parkspace.models.responses.LogoutResponse
 import com.example.parkspace.models.responses.RefreshTokenResponse

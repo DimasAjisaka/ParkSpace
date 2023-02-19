@@ -8,7 +8,7 @@ import androidx.activity.viewModels
 import com.bumptech.glide.Glide
 import com.example.parkspace.R
 import com.example.parkspace.databinding.ActivityProfilBinding
-import com.example.parkspace.models.data.LogoutModel
+import com.example.parkspace.models.responses.data.LogoutModel
 import com.example.parkspace.models.responses.ProfileResponse
 import com.example.parkspace.utils.LoadingDialog
 import com.example.parkspace.utils.Resource

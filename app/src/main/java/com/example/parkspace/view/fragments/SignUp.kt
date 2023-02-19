@@ -13,7 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.viewpager.widget.ViewPager
 import com.example.parkspace.R
 import com.example.parkspace.databinding.FragmentSignUpBinding
-import com.example.parkspace.models.data.RegisterModel
+import com.example.parkspace.models.responses.data.RegisterModel
 import com.example.parkspace.utils.LoadingDialog
 import com.example.parkspace.utils.Resource
 import com.example.parkspace.viewmodels.AuthViewModel

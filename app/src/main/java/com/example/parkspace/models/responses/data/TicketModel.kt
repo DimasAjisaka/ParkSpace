@@ -1,4 +1,4 @@
-package com.example.parkspace.models.data
+package com.example.parkspace.models.responses.data
 
 data class TicketModel(
     val floor: String?,

@@ -1,9 +1,9 @@
 package com.example.parkspace.repositories
 
-import com.example.parkspace.models.data.LoginModel
-import com.example.parkspace.models.data.LogoutModel
-import com.example.parkspace.models.data.RefreshTokenModel
-import com.example.parkspace.models.data.RegisterModel
+import com.example.parkspace.models.responses.data.LoginModel
+import com.example.parkspace.models.responses.data.LogoutModel
+import com.example.parkspace.models.responses.data.RefreshTokenModel
+import com.example.parkspace.models.responses.data.RegisterModel
 import com.example.parkspace.utils.APIConfig
 
 class AuthRepository {

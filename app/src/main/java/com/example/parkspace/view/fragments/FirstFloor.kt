@@ -12,7 +12,7 @@ import androidx.fragment.app.viewModels
 import com.example.parkspace.R
 import com.example.parkspace.databinding.FragmentFirstFloorBinding
 import com.example.parkspace.databinding.TicketBottomSheetBinding
-import com.example.parkspace.models.data.TicketModel
+import com.example.parkspace.models.responses.data.TicketModel
 import com.example.parkspace.models.responses.FloorItem
 import com.example.parkspace.utils.LoadingDialog
 import com.example.parkspace.utils.Resource

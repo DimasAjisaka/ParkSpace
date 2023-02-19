@@ -1,7 +1,8 @@
 package com.example.parkspace.utils
 
-import com.example.parkspace.models.data.*
+
 import com.example.parkspace.models.responses.*
+import com.example.parkspace.models.responses.data.*
 import retrofit2.http.*
 
 interface APIService {
